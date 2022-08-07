@@ -27,13 +27,13 @@ const theme = extendTheme({ config });
 const components:any = {
     
   h1:(props:any) => <Heading my="6" color={"green.600"} className={"gfonts"} {...props} fontSize={"6xl"} />,
-  h2: (props:any) => <Heading {...props} fontSize={"5xl"} />,
-  h3: (props:any) => <Heading {...props} fontSize={"4xl"} />,
-  h4: (props:any) => <Heading {...props} fontSize={"3xl"} />,
-  h5: (props:any) => <Heading {...props} fontSize={"2xl"} />,
-  h6: (props:any) => <Heading {...props} fontSize={"xl"} />,
-  p: (props:any) => <Text maxW={"900"} textColor="gray.500" py="3" {...props}  fontSize={"xl"}/>,
-  code:(props:any) => <Box maxW={"900"}   border="1px solid green"  display={"flex"} flexWrap="wrap" overflowY={"hidden"} p="3" overflowX="scroll" textColor="gray.500" py="3" {...props}  />,
+  h2: (props:any) => <Heading color={"green.600"} {...props} fontSize={"5xl"} />,
+  h3: (props:any) => <Heading {...props} color={"green.600"} fontSize={"4xl"} />,
+  h4: (props:any) => <Heading {...props} fontSize={"3xl"} color={"green.600"}/>,
+  h5: (props:any) => <Heading {...props} fontSize={"2xl"} color={"green.600"}/>,
+  h6: (props:any) => <Heading {...props} fontSize={"xl"} color={"green.600"}/>,
+  p: (props:any) => <Text maxW={"900"} textColor="white" py="3" {...props}  fontSize={"xl"}/>,
+  code:(props:any) => <Box maxW={"900"}  my="6" border="1px solid green"  display={"flex"} flexWrap="wrap" overflowY={"hidden"} p="3" overflowX="scroll" textColor="gray.500" py="3" {...props}  />,
   
   
 }

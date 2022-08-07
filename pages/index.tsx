@@ -133,7 +133,7 @@ function Index() {
         <Divider />
         <Box py="6" display={"flex"} flexDirection="column">
           <Box>
-            <Heading fontSize={"4xl"}>Hobbies 🍕 {"&"} Projects 💖</Heading>
+            <Heading fontSize={"4xl"}>Hobbies {"&"} Projects 💖</Heading>
             <Box maxW={"container.sm"}>
               <Text py="3" color={"green.600"}>
                 {" "}
@@ -187,9 +187,9 @@ function Index() {
             </Box>
             <Divider orientation="vertical" />
             <Box flexWrap={"wrap"} p="3" minW="350" display={"flex"} justifyContent="flex-end" flex={"2"}>
-              <ProjectsCard title="letter.js" lib={["slate.js","react.js","chakra Ui"]}/>
-              <ProjectsCard title="rudrajsohi.me" lib={["slate.js","next.js","chakra Ui"]} />
-              <ProjectsCard title="RxLabs" lib={["slate.js","next.js","chakra Ui","firebase firestore","firebase storage","firebase hosting"]}/>
+              <ProjectsCard title="letter.js" lib={["slate.js","react.js","chakra Ui"]} link="https://github.com/rudrajoshi2481/letter.js"/>
+              <ProjectsCard title="rudrajsohi.me" lib={["slate.js","next.js","chakra Ui"]} link="https://github.com/rudrajoshi2481/rudrajoshi.me-Final"/>
+              <ProjectsCard title="RxLabs" lib={["slate.js","next.js","chakra Ui","firebase firestore","firebase storage","firebase hosting"]} link="https://github.com/rudrajoshi2481/RxLabs"/>
               <ProjectsCard title="Profile.js" lib={["node.js","express.js","chakra ui","framer motion","remix.js","mongodb","mongoose etc..."]}/>
               <ProjectsCard title="All Projects" lib={["react.js [remix,next,gatsby]","flutter","blender","node.js Backend etc ..."]}/>
             </Box>
@@ -209,11 +209,11 @@ function Index() {
           <Box pb="6"  display={"flex"} flexDirection="row" flexWrap={"wrap-reverse"}>
             {/* Display All Cards */}
             <Box flex="2" flexWrap={"wrap"} minW="350" display={"flex"}>
-              <BlogsCards title="Nginx" link="/blogs/nginx" />
+              {/* <BlogsCards title="Nginx" link="/blogs/nginx" /> */}
               <BlogsCards title="Mongo DB" link="/blogs/mongodb"/>
-              {/* <BlogsCards title="Firebase" link="/blogs/firebase"/> */}
-              {/* <BlogsCards title="Chakra ui" link="/blogs/chakra-ui"/> */}
-              <BlogsCards title="Blender" link="/blogs/blender"/>
+              <BlogsCards title="Firebase" link="/blogs/firebase"/>
+              <BlogsCards title="Chakra ui" link="/blogs/chakra-ui"/>
+              {/* <BlogsCards title="Blender" link="/blogs/blender"/> */}
               {/* <BlogsCards title="UI Designs" link="/blogs/ui-designs"/> */}
             </Box>
             <Box py="3"  display={"flex"} minW="250" flexWrap="wrap" flex="1" alignItems={"flex-start"}>

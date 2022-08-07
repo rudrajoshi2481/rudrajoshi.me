@@ -1,4 +1,5 @@
 import { Box, Button, Divider, FormLabel, Heading, Input, Text, Textarea } from '@chakra-ui/react'
+import Link from 'next/link'
 import React from 'react'
 
 function Footer() {
@@ -20,8 +21,8 @@ function Footer() {
             <Heading color={"green.500"}>Contact Details</Heading>
             <Box py="3">
             <Text>Email : rudrajoshi2481@gmail.com</Text>
-            <Text>Instagram : rudra._joshi</Text>
-            <Text>twitter : </Text>
+            <Text>Instagram :<Link href="https://instagram.com"> rudra._joshi</Link></Text>
+            <Text>twitter : <Link href="https://twitter.com/Rudrajoshi_">Rudrajoshi_</Link></Text>
             </Box>
         </Box>
     </Box>
