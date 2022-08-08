@@ -46,6 +46,10 @@ function Index() {
       link:"https://reactjs.org/"
     },
     {
+      name:"git & github",
+      link:"https://www.github.com"
+    },
+    {
       name:"next.js",
       link:"https://nextjs.org/"
     },
