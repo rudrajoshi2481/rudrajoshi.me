@@ -59,6 +59,11 @@ function Index() {
       status:"expert"
     },
     {
+      name:"typescript",
+      link:"https://www.typescriptlang.org/",
+      // status:"expert"
+    },
+    {
       name:"node.js",
       link:"https://nodejs.org/en/about/",
       status:"expert"
@@ -129,17 +134,14 @@ function Index() {
             <Box maxW={"container.sm"} >
               <Text py="3"  color="gray.200">
                 {" "}
-                Officia ad ullamco magna nostrud sunt id exercitation labore.
-                Incididunt incididunt in et mollit aute. Irure aliquip anim
-                mollit qui dolore.{" "}
+                I am a <Tag>pharmacy</Tag> student {"&"} Hobbiest by nature 😀
               </Text>
-              <Text color="gray.200">
-                Officia ad ullamco magna nostrud sunt id exercitation labore.
-                Incididunt incididunt in et mollit aute. Irure aliquip anim
-                mollit qui dolore. Officia ad ullamco magna nostrud sunt id
-                exercitation labore. Incididunt incididunt in et mollit aute.
-                Irure aliquip anim mollit qui dolore.{" "}
+              <Text py={"1"} color="gray.200">I am currently in 3 year of pharmacy,
+              I have been practicing Frontend ,Backend. and programming from last more than 4 years .
+                I have worked on many collage based projects and i am really passionate about learning new things
               </Text>
+              <Text color={"orange"} textDecoration="underline">👉<Link href="/about-me" >Know more about me</Link>  </Text>
+
               <Link href={"https://github.com/rudrajoshi2481"}><Button my="3" px="6" colorScheme={"green"} variant="outline"  fontSize={"6xl"}><GoLogoGithub /></Button></Link>
             </Box>
           </Box>
@@ -217,10 +219,8 @@ function Index() {
           <Box py="3" maxW={"container.sm"}>
             <Heading fontSize={"4xl"}>Blogs 🔥</Heading>
             <Text py="3">
-              {" "}
-              Officia ad ullamco magna nostrud sunt id exercitation labore.
-              Incididunt incididunt in et mollit aute. Irure aliquip anim mollit
-              qui dolore.{" "}
+              well i am good at writing docs for the souce code ,writing books and poetry is my latest found passion 
+              
             </Text>
           </Box>
           <Box pb="6"  display={"flex"} flexDirection="row" flexWrap={"wrap-reverse"}>
@@ -230,6 +230,7 @@ function Index() {
               <BlogsCards title="Mongo DB" link="/blogs/mongodb" para={"mongodb is a NoSql database , & stores data in BSON Format"}/>
               <BlogsCards title="Firebase" link="/blogs/firebase" para={"Firesbase provides it is infrastructure as BAAS [Backend as a service]"}/>
               <BlogsCards title="Chakra ui" link="/blogs/chakra-ui" para={"Chakra is a UI Library for creating stunning designs"}/>
+              <BlogsCards title="Redhat" link="/blogs/redhat" para={"Red Hat Linux was a widely used commercial open-source Linux distribution created by Red Hat "}/>
               {/* <BlogsCards title="Blender" link="/blogs/blender"/> */}
               {/* <BlogsCards title="UI Designs" link="/blogs/ui-designs"/> */}
             </Box>

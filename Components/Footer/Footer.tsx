@@ -7,14 +7,14 @@ function Footer() {
     <Box >
     
     <Box display={"flex"} flexWrap="wrap" py="6" >
-        <Box  flex={1} minW="250" p="6">
+        {/* <Box  flex={1} minW="250" p="6">
             <Heading color={"green.500"}>Email Me🔥</Heading>
             <FormLabel my="3">Email</FormLabel>
             <Input type="email"/>
             <FormLabel my="3">body</FormLabel>
             <Textarea />
             <Button mt="6" colorScheme={"green"} variant="outline">Send</Button>
-        </Box>
+        </Box> */}
         
         <Box  mt="3" flex={1} p="6">
             
