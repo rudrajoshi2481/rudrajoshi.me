@@ -22,7 +22,8 @@ function Index() {
   const TechLibraries = [
     {
       name:"chakra Ui",
-      link:"https://chakra-ui.com/"
+      link:"https://chakra-ui.com/",
+      status:"expert"
     },
     {
       name:"Figma",
@@ -44,27 +45,33 @@ function Index() {
   const techList = [
     {
       name:"react.js",
-      link:"https://reactjs.org/"
+      link:"https://reactjs.org/",
+      status:"expert"
     },
     {
       name:"git & github",
-      link:"https://www.github.com"
+      link:"https://www.github.com",
+      status:"expert"
     },
     {
       name:"next.js",
-      link:"https://nextjs.org/"
+      link:"https://nextjs.org/",
+      status:"expert"
     },
     {
       name:"node.js",
-      link:"https://nodejs.org/en/about/"
+      link:"https://nodejs.org/en/about/",
+      status:"expert"
     },
     {
       name:"express.js",
-      link:"https://expressjs.com/"
+      link:"https://expressjs.com/",
+      status:"expert"
     },
     {
       name:"ec2",
-      link:"https://aws.amazon.com/ec2/"
+      link:"https://aws.amazon.com/ec2/",
+      status:"expert"
     },
     {
       name:"MongoDB",
@@ -72,7 +79,8 @@ function Index() {
     },
     {
       name:"firebase",
-      link:"https://firebase.google.com/"
+      link:"https://firebase.google.com/",
+      status:"expert"
     },
     {
       name:"nginx",
@@ -80,7 +88,8 @@ function Index() {
     },
     {
       name:"redhat",
-      link:"https://www.redhat.com/en"
+      link:"https://www.redhat.com/en",
+      status:"expert"
     },
     {
       name:"flutter",
@@ -90,7 +99,7 @@ function Index() {
     {
       name:"blender",
       link:"https://www.blender.org/",
-      // status:"learning"
+      status:"moderate"
     },
     {
       name:"unity Game Engine",
@@ -100,7 +109,7 @@ function Index() {
     {
       name:"Docker",
       link:"https://www.docker.com/",
-      // status:"learning"
+      status:"moderate"
     },
   
   ]
@@ -144,7 +153,7 @@ function Index() {
           <Box>
             <Heading fontSize={"4xl"}>Hobbies {"&"} Projects 🍕</Heading>
             <Box maxW={"container.sm"}>
-              <Text py="3" color={"green.600"}>
+              <Text py="3" color={"gray.500"}>
                 {" "}
                 The projects i worked on last few years ,mostly they are backend services based on node.js backend and frontend on React.js Frame works mostly Next.js Remix.js and Gatsby ...
               </Text>
@@ -162,9 +171,10 @@ function Index() {
                     borderRadius={"3"}
                     listStyleType={"none"}
                     m="1"
-                    color="white"
+                    color={e.status === "expert" ? "green.300" : "teal.500"}
                   >
                     <Link href={e.link}>{e.name}</Link>
+                    
                   </Tag>)    
                   })
                 }
