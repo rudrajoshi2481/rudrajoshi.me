@@ -19,7 +19,15 @@ import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 import { AiOutlineHome } from "react-icons/ai";
+import { useRouter } from "next/router";
 function Appbar() {
+
+  const router = useRouter()
+
+  console.log(router.route);
+
+  
+
   return (
     <>
       <DrawerComp />
@@ -31,19 +39,19 @@ function Appbar() {
           justifyContent="center"
           listStyleType={"none"}
         >
-          <ListItem px="3">
+          <ListItem  px="3">
             <Link href="/">
-              <Text fontSize={"2xl"}>
+              <Text color={router.route == "/" ? "green" : "white"}  fontSize={"2xl"}>
                 <AiOutlineHome />
               </Text>
             </Link>
           </ListItem>
-          <ListItem px="3">
-            <Link href="/about-me">About Me</Link>
+          <ListItem color={router.route == "/about-me" ? "green" : "white"}  px="3">
+            <Link  href="/about-me">About Me</Link>
           </ListItem>
           <ListItem px="3">
             <Link href="/projects">
-              <Text>Projects {"&"} Graphics</Text>
+              <Text color={router.route == "/projects" ? "green" : "white"} >Projects {"&"} Graphics</Text>
             </Link>
           </ListItem>
           {/* <ListItem px="3"><Link href="/blogs">Blogs</Link></ListItem> */}

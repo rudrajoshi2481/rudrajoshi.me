@@ -17,6 +17,7 @@ import {ImCancelCircle} from "react-icons/im"
 import {GoLogoGithub} from "react-icons/go"
 import Footer from "../Components/Footer/Footer";
 import Link from "next/link";
+import Image from "next/image";
 function Index() {
   const TechLibraries = [
     {
@@ -107,7 +108,7 @@ function Index() {
   return (
     <Box>
       {/* <Container maxW={"container.lg"}> */}
-        <Box height={"500"} display={"flex"} alignItems="center">
+        <Box justifyContent={"space-between"} height={"500"} flexWrap="wrap" display={"flex"} alignItems="center">
           <Box>
             <Heading fontSize={"6xl"}>
               Hey I{"'"}m <br />
@@ -133,17 +134,19 @@ function Index() {
               <Link href={"https://github.com/rudrajoshi2481"}><Button my="3" px="6" colorScheme={"green"} variant="outline"  fontSize={"6xl"}><GoLogoGithub /></Button></Link>
             </Box>
           </Box>
+          <Box p="3" mr="9" className="mobileDisplay" height={"500"} overflow="hidden">
+            
+            <Image alt="background img"  src="/background.jpeg" layout="fixed" height={500} width={350} style={{objectPosition:"bottom"}}></Image>
+            </Box>
         </Box>
         <Divider />
         <Box py="6" display={"flex"} flexDirection="column">
           <Box>
-            <Heading fontSize={"4xl"}>Hobbies {"&"} Projects 💖</Heading>
+            <Heading fontSize={"4xl"}>Hobbies {"&"} Projects 🍕</Heading>
             <Box maxW={"container.sm"}>
               <Text py="3" color={"green.600"}>
                 {" "}
-                Officia ad ullamco magna nostrud sunt id exercitation labore.
-                Incididunt incididunt in et mollit aute. Irure aliquip anim
-                mollit qui dolore.{" "}
+                The projects i worked on last few years ,mostly they are backend services based on node.js backend and frontend on React.js Frame works mostly Next.js Remix.js and Gatsby ...
               </Text>
             </Box>
           </Box>
@@ -194,8 +197,8 @@ function Index() {
               <ProjectsCard title="letter.js" lib={["slate.js","react.js","chakra Ui"]} link="https://github.com/rudrajoshi2481/letter.js"/>
               <ProjectsCard title="rudrajsohi.me" lib={["slate.js","next.js","chakra Ui"]} link="https://github.com/rudrajoshi2481/rudrajoshi.me-Final"/>
               <ProjectsCard title="RxLabs" lib={["slate.js","next.js","chakra Ui","firebase firestore","firebase storage","firebase hosting"]} link="https://github.com/rudrajoshi2481/RxLabs"/>
-              <ProjectsCard title="Profile.js" lib={["node.js","express.js","chakra ui","framer motion","remix.js","mongodb","mongoose etc..."]}/>
-              <ProjectsCard title="All Projects" lib={["react.js [remix,next,gatsby]","flutter","blender","node.js Backend etc ..."]}/>
+              <ProjectsCard title="Profile.js" lib={["node.js","express.js","chakra ui","framer motion","remix.js","mongodb","mongoose etc..."]} link="https://github.com/rudrajoshi2481/RxLabs"/>
+              <ProjectsCard title="All Projects" lib={["react.js [remix,next,gatsby]","flutter","blender","node.js Backend etc ..."]} link="https://github.com/rudrajoshi2481"/>
             </Box>
           </Box>
         </Box>
@@ -214,9 +217,9 @@ function Index() {
             {/* Display All Cards */}
             <Box flex="2" flexWrap={"wrap"} minW="350" display={"flex"}>
               {/* <BlogsCards title="Nginx" link="/blogs/nginx" /> */}
-              <BlogsCards title="Mongo DB" link="/blogs/mongodb"/>
-              <BlogsCards title="Firebase" link="/blogs/firebase"/>
-              <BlogsCards title="Chakra ui" link="/blogs/chakra-ui"/>
+              <BlogsCards title="Mongo DB" link="/blogs/mongodb" para={"mongodb is a NoSql database , & stores data in BSON Format"}/>
+              <BlogsCards title="Firebase" link="/blogs/firebase" para={"Firesbase provides it is infrastructure as BAAS [Backend as a service]"}/>
+              <BlogsCards title="Chakra ui" link="/blogs/chakra-ui" para={"Chakra is a UI Library for creating stunning designs"}/>
               {/* <BlogsCards title="Blender" link="/blogs/blender"/> */}
               {/* <BlogsCards title="UI Designs" link="/blogs/ui-designs"/> */}
             </Box>
@@ -238,7 +241,16 @@ function Index() {
                 m="1"
                 color="white"
               >
-                React.js {" "} <Box pl="2"><ImCancelCircle /></Box>
+                Mongodb {" "} <Box pl="2"><ImCancelCircle /></Box>
+              </Tag>{" "}
+              <Tag
+                p="2"
+                borderRadius={"3"}
+                listStyleType={"none"}
+                m="1"
+                color="white"
+              >
+                Express.js {" "} <Box pl="2"><ImCancelCircle /></Box>
               </Tag>{" "}
               
             </Box>

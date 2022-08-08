@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+
+::-webkit-scrollbar-track{
+  /* background: #888; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lightgreen;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: green;
+}
 
 @media  (max-width: 480px) {
   .mobileDisplay{
