@@ -24,7 +24,6 @@ function Appbar() {
 
   const router = useRouter()
 
-  console.log(router.route);
 
   
 
@@ -54,6 +53,12 @@ function Appbar() {
               <Text color={router.route == "/projects" ? "green" : "white"} >Projects {"&"} Graphics</Text>
             </Link>
           </ListItem>
+          <ListItem px="3">
+            <Link href="/articles/demo">
+              <Text color={"articles" == router.pathname.split("/")[1] ? "green" : "white"} >Articles</Text>
+            </Link>
+          </ListItem>
+          
           {/* <ListItem px="3"><Link href="/blogs">Blogs</Link></ListItem> */}
           {/* <ListItem px="3"><Link href="/contact">Contact Me</Link></ListItem> */}
         </UnorderedList>
