@@ -44,7 +44,7 @@ const [isLargerThan1800] = useMediaQuery('(min-width: 1800px)', {
           <UnorderedList>
            {
             blogs.map(r => {
-              return <Link href={r.link}><ListItem p="2" m="1" listStyleType={"none"} borderBottom="1px solid black">{r.name}</ListItem></Link>
+              return <Link key={r.link} href={r.link}><ListItem p="2" m="1" listStyleType={"none"} borderBottom="1px solid black">{r.name}</ListItem></Link>
             })
            }
            
@@ -79,7 +79,7 @@ const DrawerComp = ({isOpen,onOpen,onClose}:any) => {
         <UnorderedList>
            {
             blogs.map(r => {
-              return <Link href={r.link}><ListItem p="2" m="1" listStyleType={"none"} borderBottom="1px solid black">{r.name}</ListItem></Link>
+              return <Link key={r.link} href={r.link}><ListItem p="2" m="1" listStyleType={"none"} borderBottom="1px solid black">{r.name}</ListItem></Link>
             })
            }
            

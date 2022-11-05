@@ -54,7 +54,7 @@ function Appbar() {
             </Link>
           </ListItem>
           <ListItem px="3">
-            <Link href="/articles/demo">
+            <Link href="/articles/welcome">
               <Text color={"articles" == router.pathname.split("/")[1] ? "green" : "white"} >Articles</Text>
             </Link>
           </ListItem>
