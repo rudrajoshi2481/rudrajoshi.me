@@ -1,4 +1,4 @@
-import { Box, Heading, Text, useColorMode } from '@chakra-ui/react'
+import { Box, Divider, Heading, Text, useColorMode } from '@chakra-ui/react'
 import React from 'react'
 
 function BlogTitle({title,description}:any) {
@@ -9,11 +9,15 @@ function BlogTitle({title,description}:any) {
 
 
   return (
+    <>
     <Box py="3" my="3">
-        <Heading fontSize={"xxx-large"}>{title}</Heading>
-        <Text py="2" fontWeight={"light"} fontSize="large" >{description}</Text>
-        
+        <Heading fontSize={"6xl"} color="green.500">{title}</Heading>
+        <Text pt="2" fontWeight={"light"} fontSize="large" >{description}</Text>
     </Box>
+        <Box py="3" my="3">
+        <Divider />
+        </Box>
+        </>
   )
 }
 

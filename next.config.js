@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+          domains:"*",
+      },
 }
 
 
@@ -16,7 +19,11 @@ const withMDX = require('@next/mdx')({
 })
 
 module.exports = nextConfig
-
+// module.exports = {
+//   images: {
+//       domains:"*",
+//   },
+// }
 module.exports = withMDX({
   // Append the default value with md extensions
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
