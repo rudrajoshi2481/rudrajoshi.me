@@ -101,6 +101,11 @@ const DrawerComp = () => {
                   <Text> Projects {"&"} Graphics</Text>
                 </Link>
               </ListItem>
+              <ListItem my="6">
+                <Link href="/articles/welcome">
+                  <Text> Articles</Text>
+                </Link>
+              </ListItem>
 
               {/* <ListItem my="6"><Link href="/projects">👉 All Projects</Link></ListItem> */}
               {/* <ListItem my="6"><Link href="/blogs">👉 Blogs</Link></ListItem> */}
