@@ -4,6 +4,7 @@ import {
   Heading,
   Input,
   ListItem,
+  Text,
   UnorderedList,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -26,12 +27,16 @@ const blogs = [
     subPages:[]
   },
   {
-    name:"Molecular Docking",
+    name:"🔥 Molecular Docking",
     link:"/articles/molecular-docking/1.1-Introduction-to-molecular-docking",
     subPages:[
       {
         name:"Introduction to Molecular Docking",
-        link:"1.1-Introduction-to-molecular-docking"
+        link:"/articles/molecular-docking/1.1-Introduction-to-molecular-docking"
+      },
+      {
+        name:"2.2-understanding-the-structure-ofprotein.mdx",
+        link:"/articles/molecular-docking/2.2-understanding-the-structure-ofprotein"
       }
     ]
   }
@@ -54,10 +59,12 @@ function Navbar() {
   } else {
     return (
       <Box
-        position={"absolute"}
-        minW="300"
+        // position={"absolute"}
+        position={"fixed"}
+        maxW="300"
         left="0"
         borderRight={"1px solid green"}
+        borderTop={"1px solid green"}
         h="full"
       >
         <Heading p="2" m="2" fontSize={"x-large"}>
@@ -67,17 +74,27 @@ function Navbar() {
         <UnorderedList>
           {blogs.map((r) => {
             return (
-              <Link key={r.link} href={r.link}>
-                <ListItem
-                  _hover={{ background: "green.600" }}
+              <ListItem
+                  
                   fontWeight={"bold"}
                   p="2"
                   m="1"
                   listStyleType={"none"}
                 >
-                  {r.name}
-                </ListItem>
+              <Link  key={r.link} href={r.link}>
+                  <Text>{r.name}</Text>
               </Link>
+                <UnorderedList>
+                  {
+                    r.subPages.map(e => {
+                      return <ListItem p="2"
+                      m="1"
+                      _hover={{color:"green.500"}}
+                      ><Link href={e.link}>{e.name}</Link></ListItem>
+                    })
+                  }
+                </UnorderedList>
+                </ListItem>
             );
           })}
         </UnorderedList>
