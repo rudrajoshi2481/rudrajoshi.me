@@ -29,7 +29,7 @@ const components: any = {
   h5: (props: any) => <Heading {...props} fontSize={"large"} color={"green.500"}/>,
   em: (props: any) => <Text  {...props}  as="em" color="green.500" />,
   h6: (props: any) => <Heading {...props} fontSize={"md"} />,
-  p: (props: any) => <Text textTransform={"initial"} {...props}  />,
+  p: (props: any) => <Text  {...props}  />,
   blockquote:(props: any) => <Text as="em" color="grey"  {...props}  />,
   a:(props: any) => <Text color={"blue.400"}><Link  {...props} ></Link></Text>,
   code: (props: any) => <Code {...props} overflowWrap={"break-word"} background="none" py="1" my="1" fontSize={"xl"} />,

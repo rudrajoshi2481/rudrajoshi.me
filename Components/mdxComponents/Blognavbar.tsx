@@ -89,6 +89,7 @@ function Navbar() {
                     r.subPages.map(e => {
                       return <ListItem p="1"
                       m="1"
+                      key={e.link}
                       _hover={{color:"yellow.500"}}
                       ><Link href={e.link}>{e.name}</Link></ListItem>
                     })
@@ -123,9 +124,9 @@ const DrawerComp = ({ isOpen, onOpen, onClose }: any) => {
                       p="1"
                       m="1"
                       listStyleType={"none"}
-                      
+                      key={r.link}
                     >
-                  <Link key={r.link} href={r.link}>
+                  <Link  href={r.link}>
                       <Text onClick={onClose} color="green.500">{r.name}</Text>
                         </Link>
                       <UnorderedList>
@@ -134,6 +135,7 @@ const DrawerComp = ({ isOpen, onOpen, onClose }: any) => {
                       return <ListItem p="1"
                       m="1"
                       onClick={onClose}
+                      key={e.link}
                       _hover={{color:"yellow.500"}}
                       ><Link href={e.link}>{e.name}</Link></ListItem>
                     })
