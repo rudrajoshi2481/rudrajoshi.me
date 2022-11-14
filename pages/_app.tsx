@@ -20,19 +20,19 @@ import {useRouter} from "next/router"
 import Link from "next/link"
 
 const components: any = {
-  h1: (props: any) => <Heading {...props} fontSize={"6xl"} />,
-  h2: (props: any) => <Heading {...props} fontSize={"5xl"} />,
+  h1: (props: any) => <Heading {...props} fontSize={"6xl"} className='courier-fonts' color={"green.500"} />,
+  h2: (props: any) => <Heading  {...props} className='courier-fonts' fontSize={"3xl"} color={"green.500"}/>,
   ul: (props: any) => <UnorderedList {...props}/>,
   li: (props: any) => <ListItem {...props}/>,
-  h3: (props: any) => <Heading {...props} fontSize={"4xl"} />,
-  h4: (props: any) => <Heading {...props} fontSize={"3xl"} />,
-  h5: (props: any) => <Heading {...props} fontSize={"2xl"} />,
-  em: (props: any) => <Text  {...props}  as="i" color="green.500" />,
-  h6: (props: any) => <Heading {...props} fontSize={"xl"} />,
-  p: (props: any) => <Text {...props} fontSize={"xl"} />,
-
+  h3: (props: any) => <Heading className='courier-fonts' {...props} fontSize={"2xl"} color={"green.500"}/>,
+  h4: (props: any) => <Heading className='courier-fonts' {...props} fontSize={"xl"} color={"green.500"}/>,
+  h5: (props: any) => <Heading {...props} fontSize={"large"} color={"green.500"}/>,
+  em: (props: any) => <Text  {...props}  as="em" color="green.500" />,
+  h6: (props: any) => <Heading {...props} fontSize={"md"} />,
+  p: (props: any) => <Text textTransform={"initial"} {...props}  />,
+  blockquote:(props: any) => <Text as="em" color="grey"  {...props}  />,
   a:(props: any) => <Text color={"blue.400"}><Link  {...props} ></Link></Text>,
-  code: (props: any) => <Code {...props} background="none" py="3" my="3" fontSize={"xl"} />,
+  code: (props: any) => <Code {...props} overflowWrap={"break-word"} background="none" py="1" my="1" fontSize={"xl"} />,
 };
 
 

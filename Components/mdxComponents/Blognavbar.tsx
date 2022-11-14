@@ -27,7 +27,7 @@ const blogs = [
     subPages:[]
   },
   {
-    name:"🔥 Molecular Docking",
+    name:"Molecular Docking",
     link:"/articles/molecular-docking/1.1-Introduction-to-molecular-docking",
     subPages:[
       {
@@ -77,19 +77,19 @@ function Navbar() {
               <ListItem
                   
                   fontWeight={"bold"}
-                  p="2"
+                  p="1"
                   m="1"
                   listStyleType={"none"}
                 >
               <Link  key={r.link} href={r.link}>
-                  <Text>{r.name}</Text>
+                  <Text color={"green.300"}>{r.name}</Text>
               </Link>
                 <UnorderedList>
                   {
                     r.subPages.map(e => {
-                      return <ListItem p="2"
+                      return <ListItem p="1"
                       m="1"
-                      _hover={{color:"green.500"}}
+                      _hover={{color:"yellow.500"}}
                       ><Link href={e.link}>{e.name}</Link></ListItem>
                     })
                   }
@@ -106,29 +106,40 @@ function Navbar() {
 const DrawerComp = ({ isOpen, onOpen, onClose }: any) => {
   return (
     <>
-      <Button variant={"outline"} colorScheme="teal" onClick={onOpen}>
-        Articles
+      <Button  variant={"outline"} colorScheme="teal" onClick={onOpen}>
+        Articels 📚
       </Button>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Navigation</DrawerHeader>
+          <DrawerHeader>Articles</DrawerHeader>
 
           <DrawerBody>
             <UnorderedList>
               {blogs.map((r) => {
                 return (
-                  <Link key={r.link} href={r.link}>
-                    <ListItem
-                      p="2"
+                  <ListItem
+                      p="1"
                       m="1"
                       listStyleType={"none"}
-                      borderBottom="1px solid black"
+                      
                     >
-                      {r.name}
+                  <Link key={r.link} href={r.link}>
+                      <Text onClick={onClose} color="green.500">{r.name}</Text>
+                        </Link>
+                      <UnorderedList>
+                  {
+                    r.subPages.map(e => {
+                      return <ListItem p="1"
+                      m="1"
+                      onClick={onClose}
+                      _hover={{color:"yellow.500"}}
+                      ><Link href={e.link}>{e.name}</Link></ListItem>
+                    })
+                  }
+                </UnorderedList>
                     </ListItem>
-                  </Link>
                 );
               })}
             </UnorderedList>

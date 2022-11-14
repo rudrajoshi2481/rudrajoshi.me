@@ -11,8 +11,8 @@ function BlogTitle({title,description}:any) {
   return (
     <>
     <Box py="3" my="3">
-        <Heading fontSize={"6xl"} color="green.500">{title}</Heading>
-        <Text pt="2" fontWeight={"light"} fontSize="large" >{description}</Text>
+        <Heading className='courier-fonts' fontSize={"5xl"} color="green.500">{title}</Heading>
+        <Text pt="2"  fontWeight={"light"} fontSize="large" >{description}</Text>
     </Box>
         <Box py="3" my="3">
         <Divider />

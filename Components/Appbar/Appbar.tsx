@@ -80,12 +80,12 @@ const DrawerComp = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader borderBottomWidth="1px">
-            <Link href="/">Rudra Joshi</Link>
+            <Link onClick={onClose} href="/">Rudra Joshi</Link>
           </DrawerHeader>
           <DrawerBody>
             <UnorderedList listStyleType={"none"}>
               <ListItem my="6">
-                <Link href="/">
+                <Link onClick={onClose} href="/">
                   
                   <Text>
                     
@@ -93,15 +93,15 @@ const DrawerComp = () => {
                   </Text>
                 </Link>
               </ListItem>
-              <ListItem my="6">
+              <ListItem my="6" onClick={onClose}>
                 <Link href="/about-me"> About Me</Link>
               </ListItem>
-              <ListItem my="6">
+              <ListItem my="6" onClick={onClose}>
                 <Link href="/projects">
                   <Text> Projects {"&"} Graphics</Text>
                 </Link>
-              </ListItem>
-              <ListItem my="6">
+              </ListItem >
+              <ListItem my="6" onClick={onClose}>
                 <Link href="/articles/welcome">
                   <Text> Articles</Text>
                 </Link>
