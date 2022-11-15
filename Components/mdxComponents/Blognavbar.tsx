@@ -37,6 +37,10 @@ const blogs = [
       {
         name:"2.2-understanding-the-structure-ofprotein.mdx",
         link:"/articles/molecular-docking/2.2-understanding-the-structure-ofprotein"
+      },
+      {
+        name:"1.3-understand-the-active-site-of-a-protein",
+        link:"/articles/molecular-docking/1.3-understand-the-active-site-of-a-protein"
       }
     ]
   }

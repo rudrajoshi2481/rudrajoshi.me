@@ -32,7 +32,7 @@ const components: any = {
   p: (props: any) => <Text  {...props}  />,
   blockquote:(props: any) => <Text as="em" color="grey"  {...props}  />,
   a:(props: any) => <Text color={"blue.400"}><Link  {...props} ></Link></Text>,
-  code: (props: any) => <Code {...props} overflowWrap={"break-word"} background="none" py="1" my="1" fontSize={"xl"} />,
+  code: (props: any) => <Code {...props} overflowWrap={"break-word"} color="grey" border={"1px solid purple"}  background="none" p="3" my="6" fontSize={"xl"} />,
 };
 
 
