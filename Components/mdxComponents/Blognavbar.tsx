@@ -41,6 +41,10 @@ const blogs = [
       {
         name:"1.3-understand-the-active-site-of-a-protein",
         link:"/articles/molecular-docking/1.3-understand-the-active-site-of-a-protein"
+      },
+      {
+        name:"1.4-understanding-the-ligand-structure",
+        link:"/articles/molecular-docking/1.4-understanding-the-ligand-structure"
       }
     ]
   }
