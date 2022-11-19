@@ -16,7 +16,7 @@ import {
 import Appbar from "../Components/Appbar/Appbar";
 import { MDXProvider } from "@mdx-js/react";
 import {useRouter} from "next/router"
-
+import BlogNavbar from "../Components/mdxComponents/Blognavbar"
 import Link from "next/link"
 
 const components: any = {
@@ -40,7 +40,7 @@ const components: any = {
 
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter()
+  
 
   // 2. Add your color mode config
 const config: ThemeConfig = {
@@ -56,11 +56,13 @@ const config: ThemeConfig = {
 const theme = extendTheme({ config });
 
 
+
   return (
     <MDXProvider components={components}>
       <ChakraProvider>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Appbar />
+        <ShowBlogNavbar />  
         <Container maxW={"container.xl"}>
           <Component {...pageProps} />
         </Container>
@@ -68,5 +70,23 @@ const theme = extendTheme({ config });
     </MDXProvider>
   );
 }
+
+const ShowBlogNavbar = () => {
+  const router = useRouter()
+
+  let articlesPathname = router.pathname.split("/")[1]
+
+  console.log(articlesPathname);
+  
+
+  return (
+    <>
+    {
+      articlesPathname === "articles" ? <BlogNavbar/> : null
+    }
+    </>
+  )
+}
+
 
 export default MyApp;

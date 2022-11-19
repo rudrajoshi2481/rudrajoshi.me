@@ -1,54 +1,21 @@
 import {
   Box,
   Button,
+  Collapse,
   Heading,
   Input,
   ListItem,
+  Tag,
   Text,
   UnorderedList,
   useDisclosure,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import {
-  Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-} from "@chakra-ui/react";
 import { useMediaQuery } from "@chakra-ui/react";
-const blogs = [
-  {
-    name: "Welcome",
-    link: "/articles/welcome",
-    subPages:[]
-  },
-  {
-    name:"Molecular Docking",
-    link:"/articles/molecular-docking/1.1-Introduction-to-molecular-docking",
-    subPages:[
-      {
-        name:"Introduction to Molecular Docking",
-        link:"/articles/molecular-docking/1.1-Introduction-to-molecular-docking"
-      },
-      {
-        name:"2.2-understanding-the-structure-ofprotein.mdx",
-        link:"/articles/molecular-docking/2.2-understanding-the-structure-ofprotein"
-      },
-      {
-        name:"1.3-understand-the-active-site-of-a-protein",
-        link:"/articles/molecular-docking/1.3-understand-the-active-site-of-a-protein"
-      },
-      {
-        name:"1.4-understanding-the-ligand-structure",
-        link:"/articles/molecular-docking/1.4-understanding-the-ligand-structure"
-      }
-    ]
-  }
-];
+import { blogs } from "./BlogIndexes/indexBlogs";
+import { DrawerComp } from "./DrawercomponentBlogs";
+import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 
 function Navbar() {
   const [isLargerThan1800] = useMediaQuery("(min-width: 1800px)", {
@@ -76,35 +43,13 @@ function Navbar() {
         h="full"
       >
         <Heading p="2" m="2" fontSize={"x-large"}>
-          🎯☠
+          {/* 🎯☠  */}
+          Articles 🗿
         </Heading>
 
         <UnorderedList>
           {blogs.map((r) => {
-            return (
-              <ListItem
-                  
-                  fontWeight={"bold"}
-                  p="1"
-                  m="1"
-                  listStyleType={"none"}
-                >
-              <Link  key={r.link} href={r.link}>
-                  <Text color={"green.300"}>{r.name}</Text>
-              </Link>
-                <UnorderedList>
-                  {
-                    r.subPages.map(e => {
-                      return <ListItem p="1"
-                      m="1"
-                      key={e.link}
-                      _hover={{color:"yellow.500"}}
-                      ><Link href={e.link}>{e.name}</Link></ListItem>
-                    })
-                  }
-                </UnorderedList>
-                </ListItem>
-            );
+            return <ListComp blogs={r} />;
           })}
         </UnorderedList>
       </Box>
@@ -112,57 +57,51 @@ function Navbar() {
   }
 }
 
-const DrawerComp = ({ isOpen, onOpen, onClose }: any) => {
+const ListComp = ({ blogs }: any) => {
+  const { isOpen, onToggle } = useDisclosure()
+  const [subPagesLength,setSubPagesLength] = useState(0)
+useEffect(() => {
+  if(blogs.alwaysOpen){
+    onToggle();
+  }
+
+  setSubPagesLength(blogs.subPages.length)
+
+
+},[])
+
   return (
-    <>
-      <Button  variant={"outline"} colorScheme="teal" onClick={onOpen}>
-        Articels 📚
-      </Button>
-      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>Articles</DrawerHeader>
-
-          <DrawerBody>
-            <UnorderedList>
-              {blogs.map((r) => {
-                return (
-                  <ListItem
-                      p="1"
-                      m="1"
-                      listStyleType={"none"}
-                      key={r.link}
-                    >
-                  <Link  href={r.link}>
-                      <Text onClick={onClose} color="green.500">{r.name}</Text>
-                        </Link>
-                      <UnorderedList>
-                  {
-                    r.subPages.map(e => {
-                      return <ListItem p="1"
-                      m="1"
-                      onClick={onClose}
-                      key={e.link}
-                      _hover={{color:"yellow.500"}}
-                      ><Link href={e.link}>{e.name}</Link></ListItem>
-                    })
-                  }
-                </UnorderedList>
-                    </ListItem>
-                );
-              })}
-            </UnorderedList>
-          </DrawerBody>
-
-          <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
-    </>
+    
+      <ListItem key={blogs.name} fontWeight={"bold"} p="1" m="1" listStyleType={"none"}>
+        <Box onClick={onToggle} display={"flex"} justifyContent="space-between">
+          
+        <Text  color={"green.300"}>{blogs.name}</Text>
+          <Box display={"flex"} alignItems="center" transform={{rotate:"60deg"}} >
+        {/* <Tag colorScheme={"green"} mr="2">subpages : {subPagesLength}</Tag> */}
+          {
+            isOpen ? <AiOutlineArrowUp /> : <AiOutlineArrowDown />
+          }
+          
+          
+          </Box>
+        </Box>
+      <Collapse in={isOpen} animateOpacity>
+      <UnorderedList>
+          {blogs.subPages.map((e: any) => {
+            return (
+              <ListItem
+                p="1"
+                m="1"
+                key={e.link}
+                _hover={{ color: "yellow.500" }}
+              >
+                <Link href={e.link}>{e.name}</Link>
+              </ListItem>
+            );
+          })}
+        </UnorderedList></Collapse>
+      </ListItem>
+    
   );
 };
 
