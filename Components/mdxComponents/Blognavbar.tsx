@@ -42,9 +42,9 @@ function Navbar() {
         borderTop={"1px solid green"}
         h="full"
       >
-        <Heading p="2" m="2" fontSize={"x-large"}>
+        <Heading display={"flex"} alignItems="center" p="2" m="2" fontSize={"x-large"}>
           {/* 🎯☠  */}
-          Articles 🗿
+          Articles  <Text ml="2" fontSize={"xxx-large"}>🗿</Text>
         </Heading>
 
         <UnorderedList>
