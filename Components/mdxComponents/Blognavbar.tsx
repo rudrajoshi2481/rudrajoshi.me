@@ -49,7 +49,7 @@ function Navbar() {
 
         <UnorderedList>
           {blogs.map((r) => {
-            return <ListComp blogs={r} />;
+            return <ListComp blogs={r} key={r}/>;
           })}
         </UnorderedList>
       </Box>
