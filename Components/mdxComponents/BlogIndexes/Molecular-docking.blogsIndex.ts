@@ -32,5 +32,8 @@ export let MoleculardockingSubPages = [
   {
     name:"2.3-computer-aided-drug-design-and-drafting",
     link:`${link}/2.3-computer-aided-drug-design-and-drafting`
+  },{
+    name:"2.4-strucure-based-drug-design",
+    link:`${link}/2.4-strucure-based-drug-design`
   }
 ];

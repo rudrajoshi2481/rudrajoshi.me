@@ -5,6 +5,12 @@ const nextConfig = {
   images: {
           domains:"*",
       },
+//       webpack:(config,option) => {
+//   config.module.rules.push({
+//     test: /\.pdb$/, use: 'raw-loader'
+//   })
+// }
+
 }
 
 
@@ -29,3 +35,14 @@ module.exports = withMDX({
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   
 })
+
+module.exports = {
+webpack:(config,option) => {
+  config.module.rules.push({
+    test: /\.pdb$/, use: 'raw-loader'
+  })
+
+  return config
+}
+
+}

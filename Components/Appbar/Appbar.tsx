@@ -58,6 +58,11 @@ function Appbar() {
               <Text color={"articles" == router.pathname.split("/")[1] ? "green" : "white"} >Articles</Text>
             </Link>
           </ListItem>
+          <ListItem px="3">
+            <Link href="/protein">
+              <Text color={"articles" == router.pathname.split("/")[1] ? "green" : "white"} >Protein</Text>
+            </Link>
+          </ListItem>
           
           {/* <ListItem px="3"><Link href="/blogs">Blogs</Link></ListItem> */}
           {/* <ListItem px="3"><Link href="/contact">Contact Me</Link></ListItem> */}
