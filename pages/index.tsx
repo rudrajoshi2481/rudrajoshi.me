@@ -124,6 +124,7 @@ function Index() {
       {/* <Container maxW={"container.lg"}> */}
         <Box justifyContent={"space-between"} height={"500"} flexWrap="wrap" display={"flex"} alignItems="center">
           <Box>
+            <Link href="/protein"><Tag color="green.500"><Box p="1"><Text>👉  Docking Project</Text><Text > Open Protein Images</Text></Box></Tag></Link>
             <Heading fontSize={"6xl"}>
               Hey I{"'"}m <br />
             </Heading>

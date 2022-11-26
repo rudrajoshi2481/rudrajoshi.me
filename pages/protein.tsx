@@ -32,6 +32,7 @@ function Protein() {
           src={"/images/proteinImages/quercerin.png"}
           layout="responsive"
           width={"2"}
+          quality="40"
           height={"1"}
         />
         <Text my="3" fontSize={"lg"} color={"green.400"}>
@@ -46,6 +47,7 @@ function Protein() {
           src={"/images/proteinImages/olaparib.png"}
           layout="responsive"
           width={"2"}
+          quality="40"
           height={"1"}
         />
         <Text my="3" fontSize={"lg"} color={"green.400"}>
@@ -60,6 +62,7 @@ function Protein() {
           src={"/images/proteinImages/icarniin.png"}
           layout="responsive"
           width={"2"}
+          quality="40"
           height={"1"}
         />
         <Text my="3" fontSize={"lg"} color={"green.400"}>
