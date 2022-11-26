@@ -4,7 +4,7 @@ import Image from "next/image";
 function Protein() {
   return (
     <Box>
-      <Heading>Protein Ligand Intrections 🗿</Heading>
+      <Heading>Protein Ligand Intrections 🎯</Heading>
       <Box display={"flex"}>
       <Text as="strong">guide: </Text>
       <Text pl="2" color="green.400">Ankita Tarapra</Text>
