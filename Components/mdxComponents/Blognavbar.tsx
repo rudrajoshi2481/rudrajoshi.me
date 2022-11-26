@@ -60,15 +60,15 @@ function Navbar() {
 const ListComp = ({ blogs }: any) => {
   const { isOpen, onToggle } = useDisclosure()
   const [subPagesLength,setSubPagesLength] = useState(0)
-useEffect(() => {
-  if(blogs.alwaysOpen){
-    onToggle();
-  }
+// useEffect(() => {
+//   if(blogs.alwaysOpen){
+//     onToggle();
+//   }
 
-  setSubPagesLength(blogs.subPages.length)
+//   setSubPagesLength(blogs.subPages.length)
 
 
-},[])
+// },[])
 
   return (
     
