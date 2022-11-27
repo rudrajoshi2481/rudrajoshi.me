@@ -36,13 +36,13 @@ module.exports = withMDX({
   
 })
 
-module.exports = {
-webpack:(config,option) => {
-  config.module.rules.push({
-    test: /\.pdb$/, use: 'raw-loader'
-  })
+// module.exports = {
+// webpack:(config,option) => {
+//   config.module.rules.push({
+//     test: /\.pdb$/, use: 'raw-loader'
+//   })
 
-  return config
-}
+//   return config
+// }
 
-}
+// }
