@@ -60,7 +60,7 @@ function Appbar() {
           </ListItem>
           <ListItem px="3">
             <Link href="/protein">
-              <Text color={"articles" == router.pathname.split("/")[1] ? "green" : "white"} >Protein</Text>
+              <Text color={"protein" == router.pathname.split("/")[1] ? "green" : "white"} >Protein</Text>
             </Link>
           </ListItem>
           
@@ -89,8 +89,8 @@ const DrawerComp = () => {
           </DrawerHeader>
           <DrawerBody>
             <UnorderedList listStyleType={"none"}>
-              <ListItem my="6">
-                <Link onClick={onClose} href="/">
+              <ListItem onClick={onClose} my="6">
+                <Link  href="/">
                   
                   <Text>
                     
@@ -111,6 +111,13 @@ const DrawerComp = () => {
                   <Text> Articles</Text>
                 </Link>
               </ListItem>
+              
+              <ListItem my="6" onClick={onClose}>
+                <Link href="/protein">
+                  <Text>Protein</Text>
+                </Link>
+              </ListItem>
+
 
               {/* <ListItem my="6"><Link href="/projects">👉 All Projects</Link></ListItem> */}
               {/* <ListItem my="6"><Link href="/blogs">👉 Blogs</Link></ListItem> */}

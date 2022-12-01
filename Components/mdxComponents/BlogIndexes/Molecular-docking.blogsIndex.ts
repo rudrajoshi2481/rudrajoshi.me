@@ -35,5 +35,16 @@ export let MoleculardockingSubPages = [
   },{
     name:"2.4-strucure-based-drug-design",
     link:`${link}/2.4-strucure-based-drug-design`
+  },
+  {
+    name:"2.5-virtual-screening",
+    link:`${link}/2.5-virtual-screening`
+  },
+  {
+    name:"2.6-virtual-based-virtual-screening",
+    link:`${link}/2.6-virtual-based-virtual-screening`
+  },{
+    name:"2.7-workfolw-of-multistage-drug-designing",
+    link:`${link}/2.7-workfolw-of-multistage-drug-designing`
   }
 ];
