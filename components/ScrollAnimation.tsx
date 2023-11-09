@@ -1,6 +1,6 @@
 "use client"
 import React, { useRef } from 'react'
-import { isValidMotionProp, motion, useAnimationFrame, useMotionValue, useScroll, useSpring, useTransform, useVelocity } from "framer-motion"
+import { AnimatePresence, isValidMotionProp, motion, useAnimationFrame, useMotionValue, useScroll, useSpring, useTransform, useVelocity } from "framer-motion"
 import { Box, Spacer, chakra, shouldForwardProp } from '@chakra-ui/react'
 import { wrap } from "@motionone/utils";
 import {Noto_Serif_Old_Uyghur} from 'next/font/google';
@@ -64,6 +64,7 @@ const FramerBox = chakra(motion.div, {
      */
     return (
       <Box className="parallax">
+        <AnimatePresence>
         <FramerBox  key="modal" className="scroller" style={{ x }}>
           <span className={NotoFonts.className}>{children} </span>
           <span className={NotoFonts.className}>{children} </span>
@@ -71,6 +72,7 @@ const FramerBox = chakra(motion.div, {
           <span className={NotoFonts.className}>{children} </span>
           <span className={NotoFonts.className}>{children} </span>
         </FramerBox>
+        </AnimatePresence>
       </Box>
     );
   }
