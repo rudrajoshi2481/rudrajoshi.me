@@ -19,46 +19,46 @@ import { useState } from "react";
 const PoppinsFonts = Poppins({ subsets: ["latin"], weight: ["400", "200"] });
 const RasaFonts = Rasa({ subsets: ["latin"], weight: ["600", "700"] });
 function Index() {
-  // const [ProjectArray, setProjectArray] = useState([
-  //   {
-  //     title: "Design Drugs : Triple Negative Brest Cancer",
-  //     tags: ["pharmaceutical Research", "Medicinal Chemistry"],
-  //     description:
-  //       "Awarded a grant by the Gujarat government for spearheading the design and synthesis of a novel drug targeting triple negative breast cancer. Leveraged open-source tools such as Autodock, RDKit, and ChemBL database to pioneer advancements in pharmaceutical research and development.",
-  //     links: {
-  //       name: "",
-  //       link: "",
-  //     },
-  //     award: true,
-  //   },
-  //   {
-  //     title: "Sorcery Dock : A Molecular Docking Software",
-  //     tags: [
-  //       "Full-Stack Software",
-  //       "React.js",
-  //       "Express",
-  //       "Google Cloud Provider",
-  //     ],
-  //     description:
-  //       "Sorcery Dock, my brainchild, is a pharmaceutical research web application that simplifies parallel molecular docking. With a click of a button and a drawn molecule, it seamlessly performs docking on the server side. Streamlining the process for efficient and user-friendly pharmaceutical research.",
-  //     links: {
-  //       name: "www.sorcery.rudrajoshi.me",
-  //       link: "https://sorcery.rudrajoshi.me",
-  //     },
-  //     award: false,
-  //   },
-  //   {
-  //     title: "System Design : Using Google Cloud Provide",
-  //     tags: ["pub-sub", "node.js", "sockets", "storage"],
-  //     description:
-  //       "In a challenging practice endeavor, I crafted a distributed system using Google services such as Pub/Sub, App Run, and Next.js in conjunction with Node.js and Python Flask. This project, with its multitude of endpoints, pushed the boundaries of complexity, providing a valuable learning experience.",
-  //     links: {
-  //       name: "Github link",
-  //       link: "https://github.com/rudrajoshi2481/",
-  //     },
-  //     award: false,
-  //   },
-  // ]);
+  const [ProjectArray, setProjectArray] = useState([
+    {
+      title: "Design Drugs : Triple Negative Brest Cancer",
+      tags: ["pharmaceutical Research", "Medicinal Chemistry"],
+      description:
+        "Awarded a grant by the Gujarat government for spearheading the design and synthesis of a novel drug targeting triple negative breast cancer. Leveraged open-source tools such as Autodock, RDKit, and ChemBL database to pioneer advancements in pharmaceutical research and development.",
+      links: {
+        name: "",
+        link: "",
+      },
+      award: true,
+    },
+    {
+      title: "Sorcery Dock : A Molecular Docking Software",
+      tags: [
+        "Full-Stack Software",
+        "React.js",
+        "Express",
+        "Google Cloud Provider",
+      ],
+      description:
+        "Sorcery Dock, my brainchild, is a pharmaceutical research web application that simplifies parallel molecular docking. With a click of a button and a drawn molecule, it seamlessly performs docking on the server side. Streamlining the process for efficient and user-friendly pharmaceutical research.",
+      links: {
+        name: "www.sorcery.rudrajoshi.me",
+        link: "https://sorcery.rudrajoshi.me",
+      },
+      award: false,
+    },
+    {
+      title: "System Design : Using Google Cloud Provide",
+      tags: ["pub-sub", "node.js", "sockets", "storage"],
+      description:
+        "In a challenging practice endeavor, I crafted a distributed system using Google services such as Pub/Sub, App Run, and Next.js in conjunction with Node.js and Python Flask. This project, with its multitude of endpoints, pushed the boundaries of complexity, providing a valuable learning experience.",
+      links: {
+        name: "Github link",
+        link: "https://github.com/rudrajoshi2481/",
+      },
+      award: false,
+    },
+  ]);
 
   return (
     <Box>
@@ -125,7 +125,7 @@ function Index() {
           </Text>
         </Box>
         <Box w="full" display={"flex"}>
-          {/* <Flex flex="2" gap="6" flexWrap={"wrap"} my="6">
+          <Flex flex="2" gap="6" flexWrap={"wrap"} my="6">
             {ProjectArray.map((e) => {
               return (
                 <>
@@ -140,7 +140,7 @@ function Index() {
                 </>
               );
             })}
-          </Flex> */}
+          </Flex>
           <Flex justifyContent={"flex-start"} flex="1">
             All the tags are going to be here...
           </Flex>
