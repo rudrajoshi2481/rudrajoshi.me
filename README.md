@@ -1,35 +1,99 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# rudrajoshi.me-Final
+ const TechLibraries = [
+    {
+      name:"chakra Ui",
+      link:"https://chakra-ui.com/",
+      status:"expert"
+    },
+    {
+      name:"Figma",
+      link:"https://www.figma.com/"
+    },
+    {
+      name:"Mdxjs",
+      link:"https://mdxjs.com/"
+    },
+    {
+      name:"winston ",
+      link:"https://github.com/winstonjs/winston"
+    },
+    {
+      name:"react three.js",
+      link:"https://github.com/pmndrs/react-three-fiber"
+    }
+  ]
+  const techList = [
+    {
+      name:"react.js",
+      link:"https://reactjs.org/",
+      status:"expert"
+    },
+    {
+      name:"git & github",
+      link:"https://www.github.com",
+      status:"expert"
+    },
+    {
+      name:"next.js",
+      link:"https://nextjs.org/",
+      status:"expert"
+    },
+    {
+      name:"typescript",
+      link:"https://www.typescriptlang.org/",
+      // status:"expert"
+    },
+    {
+      name:"node.js",
+      link:"https://nodejs.org/en/about/",
+      status:"expert"
+    },
+    {
+      name:"express.js",
+      link:"https://expressjs.com/",
+      status:"expert"
+    },
+    {
+      name:"ec2",
+      link:"https://aws.amazon.com/ec2/",
+      status:"expert"
+    },
+    {
+      name:"MongoDB",
+      link:"https://www.mongodb.com/"
+    },
+    {
+      name:"firebase",
+      link:"https://firebase.google.com/",
+      status:"expert"
+    },
+    {
+      name:"nginx",
+      link:"https://www.nginx.com/"
+    },
+    {
+      name:"redhat",
+      link:"https://www.redhat.com/en",
+      status:"expert"
+    },
+    {
+      name:"flutter",
+      link:"https://flutter.dev/",
+      status:"learning"
+    },
+    {
+      name:"blender",
+      link:"https://www.blender.org/",
+      status:"moderate"
+    },
+    {
+      name:"unity Game Engine",
+      link:"https://unity.com/",
+      status:"learning"
+    },
+    {
+      name:"Docker",
+      link:"https://www.docker.com/",
+      status:"moderate"
+    },
+  
+  ]
