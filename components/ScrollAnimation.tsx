@@ -35,10 +35,11 @@ const FramerBox = chakra(motion.div, {
   
     const directionFactor = useRef<number>(1);
 
-    // @ts-nocheck
+    // @ts-ignore
     useAnimationFrame((t,delta):any => {
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-  
+      // @ts-ignore
+        let time = t
       /**
        * This is what changes the direction of the scroll once we
        * switch scrolling directions.
