@@ -64,8 +64,8 @@ const FramerBox = chakra(motion.div, {
      */
     return (
       <Box className="parallax">
-        <AnimatePresence>
-        <FramerBox    exit={{ opacity: 0 }} key="modal" className="scroller" style={{ x }}>
+        <AnimatePresence mode='wait'  initial={false}>
+        <FramerBox     key="modal" className="scroller" style={{ x }}>
           <span className={NotoFonts.className}>{children} </span>
           <span className={NotoFonts.className}>{children} </span>
           <span className={NotoFonts.className}>{children} </span>
