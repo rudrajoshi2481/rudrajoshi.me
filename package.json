@@ -10,7 +10,7 @@
     "lazy": "concurrently \"git add .\" \"git commit -m 'lazy commit '\" \"git push\" "
   },
   "dependencies": {
-    "@chakra-ui/next-js": "^2.1.5",
+    "@chakra-ui/next-js": "latest",
     "@chakra-ui/react": "latest",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
