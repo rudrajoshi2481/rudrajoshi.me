@@ -36,7 +36,7 @@ const FramerBox = chakra(motion.div, {
     const directionFactor = useRef<number>(1);
 
     // @ts-nocheck
-    useAnimationFrame((t, delta) => {
+    useAnimationFrame((t,delta):any => {
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
   
       /**
