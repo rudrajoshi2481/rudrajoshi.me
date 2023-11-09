@@ -64,7 +64,8 @@ const FramerBox = chakra(motion.div, {
      */
     return (
       <Box className="parallax">
-        <FramerBox className="scroller" style={{ x }}>
+        <FramerBox  key="modal" className="scroller" style={{ x }}>
+          <span className={NotoFonts.className}>{children} </span>
           <span className={NotoFonts.className}>{children} </span>
           <span className={NotoFonts.className}>{children} </span>
           <span className={NotoFonts.className}>{children} </span>
