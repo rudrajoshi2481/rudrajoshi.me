@@ -22,6 +22,7 @@ const NotoFonts = Noto_Serif_Old_Uyghur({
 function CardBox({ title, tags, description, awards, links }: any) {
   return (
     <Box
+    key={title}
       _hover={{ cursor: "pointer", background: "#fdf8e9" }}
       pos={"relative"}
       minW={"300"}
@@ -46,6 +47,7 @@ function CardBox({ title, tags, description, awards, links }: any) {
           {tags.map((e: any) => {
             return (
               <Badge
+                key={e}
                 maxW={"fit-content"}
                 colorScheme={"green"}
                 variant={"solid"}

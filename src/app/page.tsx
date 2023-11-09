@@ -15,10 +15,11 @@ import { Poppins, Rasa } from "next/font/google";
 import Link from "next/link";
 import ScrollAnimation from "../../components/ScrollAnimation";
 import CardBox from "../../components/CardBox";
+import { useState } from "react";
 const PoppinsFonts = Poppins({ subsets: ["latin"], weight: ["400", "200"] });
 const RasaFonts = Rasa({ subsets: ["latin"], weight: ["600", "700"] });
 function Index() {
-  const ProjectsArray = [
+  const [ProjectArray, setProjectArray] = useState([
     {
       title: "Design Drugs : Triple Negative Brest Cancer",
       tags: ["pharmaceutical Research", "Medicinal Chemistry"],
@@ -57,7 +58,7 @@ function Index() {
       },
       award: false,
     },
-  ];
+  ]);
 
   return (
     <Box>
@@ -70,7 +71,7 @@ function Index() {
             mt="16"
             flexWrap={"wrap"}
           >
-            Hey I'm{" "}
+            Hey I{"'"}m{" "}
             <Text ml="2" color={"green.600"}>
               {" "}
               Rudra Joshi.
@@ -84,12 +85,12 @@ function Index() {
             mt="2"
             className={PoppinsFonts.className}
           >
-            I'm a Final Year{" "}
+            I{"'"}m a Final Year{" "}
             <Text px="2" as="u" color="green.600">
               Pharmacy Student
             </Text>{" "}
             &{" "}
-            <Text  as="u" color={"green.600"} px="2">
+            <Text as="u" color={"green.600"} px="2">
               Software Developer
             </Text>{" "}
             by passion.
@@ -116,7 +117,7 @@ function Index() {
         <Box mt="6">
           <Heading className={PoppinsFonts.className}>Projects.</Heading>
           <Text mt="2" color={"gray.600"}>
-            In the past couple of years, I've seamlessly navigated both
+            In the past couple of years, I{"'"}ve seamlessly navigated both
             pharmaceutical research projects and the development of software
             tailored for the industry. My portfolio reflects a dynamic skill
             set, bridging the gap between hands-on research and cutting-edge
@@ -124,11 +125,12 @@ function Index() {
           </Text>
         </Box>
         <Box w="full" display={"flex"}>
-          <Flex  flex="2" gap="6" flexWrap={"wrap"} my="6">
-            {ProjectsArray.map((e) => {
+          <Flex flex="2" gap="6" flexWrap={"wrap"} my="6">
+            {ProjectArray.map((e) => {
               return (
                 <>
                   <CardBox
+                    
                     title={e.title}
                     tags={e.tags}
                     description={e.description}

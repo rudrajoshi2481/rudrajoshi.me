@@ -15,7 +15,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import React from "react";
-import Footer from "../Components/Footer/Footer";
+
 
 function About() {
   return (
@@ -63,7 +63,7 @@ function About() {
         <Heading py="3">Side Hobbies</Heading>
         <Text>I have hobbies of reading books and by books means lots of books that ,everyone call it a library </Text>
       </Container>
-      <Footer />
+      
     </Box>
   );
 }
