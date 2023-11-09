@@ -13,7 +13,9 @@ import {
 import "./globals.css";
 import { Poppins, Rasa } from "next/font/google";
 import Link from "next/link";
-import ScrollAnimation from "../../components/ScrollAnimation";
+// import ScrollAnimation from "../../components/ScrollAnimation";
+import dynamic from "next/dynamic"
+const ScrollAnimation = dynamic(() => import("../../components/ScrollAnimation"),{ssr:false})
 import CardBox from "../../components/CardBox";
 import { useState } from "react";
 const PoppinsFonts = Poppins({ subsets: ["latin"], weight: ["400", "200"] });
