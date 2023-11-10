@@ -1,9 +1,10 @@
 "use client"
-import React, { useRef } from 'react'
+import React, { Suspense, useRef } from 'react'
 import { AnimatePresence, isValidMotionProp, motion, useAnimationFrame, useMotionValue, useScroll, useSpring, useTransform, useVelocity } from "framer-motion"
 import { Box, Spacer, Text, chakra, shouldForwardProp } from '@chakra-ui/react'
 import { wrap } from "@motionone/utils";
 import {Noto_Serif_Old_Uyghur} from 'next/font/google';
+import dynamic from 'next/dynamic';
 
 const NotoFonts = Noto_Serif_Old_Uyghur({ subsets: ["latin"], weight: ["400"] });
 
@@ -78,12 +79,15 @@ export const FramerBox = chakra(motion.div, {
     );
   }
 
+
 function ScrollAnimation() {
   return (
     <Box w={"full"} py="6" overflow={"hidden"}> 
+        <Suspense >
         <ParallaxText baseVelocity={-2}>Molecular Dynamics.</ParallaxText>
         <Spacer h={"2"}/>
         <ParallaxText baseVelocity={-3}>Medicinal Chemistry.</ParallaxText>
+        </Suspense>
     </Box>
   )
 }
