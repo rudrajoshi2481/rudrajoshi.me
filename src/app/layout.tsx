@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <CacheProvider key="5123"> */}
+        <CacheProvider key="5123">
           <ChakraProvider>
             <ColorModeScript
               storageKey="colorMode"
@@ -39,7 +39,7 @@ export default function RootLayout({
             <Box mt="12">{children}</Box>
             
           </ChakraProvider>
-        {/* </CacheProvider> */}
+        </CacheProvider>
       </body>
     </html>
   );
