@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <CacheProvider>
+        <CacheProvider key="5123">
           <ChakraProvider>
             <ColorModeScript
               storageKey="colorMode"

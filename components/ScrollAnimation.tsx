@@ -1,21 +1,21 @@
 "use client"
 import React, { useRef } from 'react'
 import { AnimatePresence, isValidMotionProp, motion, useAnimationFrame, useMotionValue, useScroll, useSpring, useTransform, useVelocity } from "framer-motion"
-import { Box, Spacer, chakra, shouldForwardProp } from '@chakra-ui/react'
+import { Box, Spacer, Text, chakra, shouldForwardProp } from '@chakra-ui/react'
 import { wrap } from "@motionone/utils";
 import {Noto_Serif_Old_Uyghur} from 'next/font/google';
 
 const NotoFonts = Noto_Serif_Old_Uyghur({ subsets: ["latin"], weight: ["400"] });
 
-const FramerBox = chakra(motion.div, {
+export const FramerBox = chakra(motion.div, {
     /**
      * Allow motion props and non-Chakra props to be forwarded.
      */
-    shouldForwardProp: isValidMotionProp,
-    // shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+    // shouldForwardProp: isValidMotionProp,
+    shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
   });
   
-  function ParallaxText({ children, baseVelocity = 100 }: any) {
+  export function ParallaxText({ children, baseVelocity = 100 }: any) {
     const baseX = useMotionValue(0);
     const { scrollY } = useScroll();
     const scrollVelocity = useVelocity(scrollY);
@@ -67,11 +67,11 @@ const FramerBox = chakra(motion.div, {
       <Box className="parallax">
         <AnimatePresence >
         <FramerBox     key="modal" className="scroller" style={{ x }}>
-          <span className={NotoFonts.className}>{children} </span>
-          <span className={NotoFonts.className}>{children} </span>
-          <span className={NotoFonts.className}>{children} </span>
-          <span className={NotoFonts.className}>{children} </span>
-          <span className={NotoFonts.className}>{children} </span>
+          <Text className={NotoFonts.className}>{children} </Text>
+          <Text className={NotoFonts.className}>{children} </Text>
+          <Text className={NotoFonts.className}>{children} </Text>
+          <Text className={NotoFonts.className}>{children} </Text>
+          <Text className={NotoFonts.className}>{children} </Text>
         </FramerBox>
         </AnimatePresence>
       </Box>
