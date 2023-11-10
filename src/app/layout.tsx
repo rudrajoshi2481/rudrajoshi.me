@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Appbar from "../../components/Appbar";
 import { useEffect, useState } from "react";
-import PopUp from "../../components/PopUp";
+
 
 export default function RootLayout({
   children,
@@ -37,7 +37,7 @@ export default function RootLayout({
             />
             <Appbar />
             <Box mt="12">{children}</Box>
-            <PopUp />
+            
           </ChakraProvider>
         </CacheProvider>
       </body>

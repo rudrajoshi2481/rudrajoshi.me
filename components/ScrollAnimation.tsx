@@ -11,7 +11,8 @@ const FramerBox = chakra(motion.div, {
     /**
      * Allow motion props and non-Chakra props to be forwarded.
      */
-    shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+    shouldForwardProp: isValidMotionProp,
+    // shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
   });
   
   function ParallaxText({ children, baseVelocity = 100 }: any) {
@@ -64,7 +65,7 @@ const FramerBox = chakra(motion.div, {
      */
     return (
       <Box className="parallax">
-        <AnimatePresence mode='wait'  initial={false}>
+        <AnimatePresence >
         <FramerBox     key="modal" className="scroller" style={{ x }}>
           <span className={NotoFonts.className}>{children} </span>
           <span className={NotoFonts.className}>{children} </span>
