@@ -19,7 +19,7 @@
     "@react-three/drei": "latest",
     "@react-three/fiber": "latest",
     "concurrently": "latest",
-    "framer-motion": "latest",
+    "framer-motion": "10.16.4",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
