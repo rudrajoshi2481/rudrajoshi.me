@@ -90,7 +90,7 @@ export const FramerBox = chakra(motion.div, {
 function ScrollAnimation() {
   return (
     <Box w={"full"} py="6" overflow={"hidden"}> 
-        
+          
         <ParallaxText baseVelocity={-2}>Molecular Dynamics.</ParallaxText>
         <Spacer h={"2"}/>
         <ParallaxText baseVelocity={-3}>Medicinal Chemistry.</ParallaxText>
