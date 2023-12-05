@@ -37,11 +37,8 @@ export const FramerBox = chakra(motion.div, {
   
     const directionFactor = useRef<number>(1);
 
-    console.log("Animation frame working ");
     // @ts-ignore
     useAnimationFrame((t,delta):any => {
-
-      console.log("Animation frame working 01");
       
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
       // @ts-ignore
@@ -51,7 +48,7 @@ export const FramerBox = chakra(motion.div, {
        * switch scrolling directions.
        */
 
-      console.log("Animation frame working 02");
+    
       if (velocityFactor.get() < 0) {
         directionFactor.current = -1;
       } else if (velocityFactor.get() > 0) {
@@ -63,7 +60,7 @@ export const FramerBox = chakra(motion.div, {
       baseX.set(baseX.get() + moveBy);
     });
   
-    console.log("Animation frame working over");
+    
     /**
      * The number of times to repeat the child text should be dynamically calculated
      * based on the size of the text and viewport. Likewise, the x motion value is

@@ -22,6 +22,7 @@ import { useState } from "react";
 import ErrorBoundary from "../../components/ErrorBoundary";
 // import ModelViewer from "../../components/ModelBox";
 const PoppinsFonts = Poppins({ subsets: ["latin"], weight: ["400", "200"] });
+import { useMediaQuery } from '@chakra-ui/react'
 const RasaFonts = Rasa({ subsets: ["latin"], weight: ["600", "700"] });
 
 const ProteinModel = dynamic(() => import("../../components/ModelBox"),{ssr:false})
@@ -67,11 +68,20 @@ function Index() {
     },
   ]);
 
+
+// ssr-friendly media query with fallback
+const [isLargerThan800] = useMediaQuery('(min-width: 800px)', {
+  ssr: true,
+  fallback: false, // return false on the server, and re-evaluate on the client side
+})
+
+console.log(isLargerThan800)
+
   return (
     <Box>
       <Container maxW={"container.xl"}>
-        <HStack>
-        <Box py="26" justifyContent={"space-around"} minH={"30vh"}>
+        <HStack flexWrap={"wrap"}>
+        <Box py="26" flex={"1"} minW={"350"} justifyContent={"space-around"} minH={"30vh"}>
           <Heading
             fontSize={"xxx-large"}
             display={"flex"}
@@ -122,7 +132,7 @@ function Index() {
             </Link>
           </ButtonGroup>
         </Box>
-        <Box height={"45vh"}  mt="3" width={"30vw"}>
+        <Box flex={"1"} height={"45vh"}  mt="3" width={"35vw"}>
             {/* <Text textAlign={"center"} bottom={"15"}>PDB ID : 7aad</Text> */}
             <ErrorBoundary>
             <ProteinModel />
