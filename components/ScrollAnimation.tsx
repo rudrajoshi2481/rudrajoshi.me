@@ -75,11 +75,11 @@ export const FramerBox = chakra(motion.div, {
       <Box className="parallax">
         <AnimatePresence >
         <FramerBox    key="modal" className="scroller" style={{ x }}>
-          <Text className={NotoFonts.className}>{children} </Text>
-          <Text className={NotoFonts.className}>{children} </Text>
-          <Text className={NotoFonts.className}>{children} </Text>
-          <Text className={NotoFonts.className}>{children} </Text>
-          <Text className={NotoFonts.className}>{children} </Text>
+          <Text color={"black"} className={NotoFonts.className}>{children} </Text>
+          <Text color={"black"} className={NotoFonts.className}>{children} </Text>
+          <Text color={"black"} className={NotoFonts.className}>{children} </Text>
+          <Text color={"black"} className={NotoFonts.className}>{children} </Text>
+          <Text color={"black"} className={NotoFonts.className}>{children} </Text>
         </FramerBox>
         </AnimatePresence>
       </Box>

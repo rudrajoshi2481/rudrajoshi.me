@@ -30,10 +30,10 @@ export default function RootLayout({
         <CacheProvider key="5123">
           <ChakraProvider>
             <ColorModeScript
-              storageKey="colorMode"
-              type="localStorage"
-              key={"5"}
-              initialColorMode={colorMode}
+              // storageKey="colorMode"
+              // type="localStorage"
+              // key={"5"}
+              // initialColorMode={colorMode}
             />
             <Appbar />
             <Box mt="12">{children}</Box>

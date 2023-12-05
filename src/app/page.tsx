@@ -72,6 +72,7 @@ function Index() {
             className={RasaFonts.className}
             mt="16"
             flexWrap={"wrap"}
+            color={"black"}
           >
             Hey I{"'"}m{" "}
             <Text ml="2" color={"green.600"}>
@@ -86,21 +87,22 @@ function Index() {
             fontSize={"xl"}
             mt="2"
             className={PoppinsFonts.className}
+            color={"black"}
           >
             I{"'"}m a Final Year{" "}
-            <Text px="2" as="u" color="green.600">
+            <Text px="2"  as="u" color="green.600">
               Pharmacy Student
             </Text>{" "}
             &{" "}
             <Text as="u" color={"green.600"} px="2">
               Software Developer
-            </Text>{" "}
+            </Text >{" "}
             by passion.
           </Text>
           <Tag mt="5" colorScheme="green">
             About me.
           </Tag>
-          <Text maxW={"650"} className={PoppinsFonts.className} fontSize={"xl"}>
+          <Text maxW={"650"} color={"black"}  className={PoppinsFonts.className} fontSize={"xl"}>
             Enthusiastic about pharmaceutical projects and equally passionate
             about creating innovative software solutions. Final year pharmacy
             student with a dual love for science and coding, seeking to bridge
@@ -117,7 +119,7 @@ function Index() {
         <ScrollAnimation />
         <Divider mt="6" borderColor={"yellow.400"} />
         <Box mt="6">
-          <Heading className={PoppinsFonts.className}>Projects.</Heading>
+          <Heading className={PoppinsFonts.className} color={"black"}>Projects.</Heading>
           <Text mt="2" color={"gray.600"}>
             In the past couple of years, I{"'"}ve seamlessly navigated both
             pharmaceutical research projects and the development of software
