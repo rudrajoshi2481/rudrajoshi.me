@@ -75,11 +75,11 @@ export const FramerBox = chakra(motion.div, {
       <Box className="parallax">
         <AnimatePresence >
         <FramerBox    key="modal" className="scroller" style={{ x }}>
-          <Text color={"black"} className={NotoFonts.className}>{children} </Text>
-          <Text color={"black"} className={NotoFonts.className}>{children} </Text>
-          <Text color={"black"} className={NotoFonts.className}>{children} </Text>
-          <Text color={"black"} className={NotoFonts.className}>{children} </Text>
-          <Text color={"black"} className={NotoFonts.className}>{children} </Text>
+          <Text mx="2" color={"black"} className={NotoFonts.className}>{children} </Text>
+          <Text mx="2" color={"black"} className={NotoFonts.className}>{children} </Text>
+          <Text mx="2" color={"black"} className={NotoFonts.className}>{children} </Text>
+          <Text mx="2" color={"black"} className={NotoFonts.className}>{children} </Text>
+          <Text mx="2" color={"black"} className={NotoFonts.className}>{children} </Text>
         </FramerBox>
         </AnimatePresence>
       </Box>
@@ -91,9 +91,9 @@ function ScrollAnimation() {
   return (
     <Box w={"full"} py="6" overflow={"hidden"}> 
           
-        <ParallaxText baseVelocity={-2}>Molecular Dynamics.</ParallaxText>
+        <ParallaxText baseVelocity={-2}>Molecular Dynamics | {"  "}</ParallaxText>
         <Spacer h={"2"}/>
-        <ParallaxText baseVelocity={-3}>Medicinal Chemistry.</ParallaxText>
+        <ParallaxText baseVelocity={-3}>Medicinal Chemistry | {"  "}</ParallaxText>
         
     </Box>
   )

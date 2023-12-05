@@ -6,6 +6,7 @@ import {
   Container,
   Divider,
   Flex,
+  HStack,
   Heading,
   Tag,
   Text,
@@ -18,6 +19,7 @@ import dynamic from "next/dynamic"
 // const ScrollAnimation = dynamic(() => import("../../components/ScrollAnimation"),{ssr:false})
 import CardBox from "../../components/CardBox";
 import { useState } from "react";
+import ModelViewer from "../../components/ModelBox";
 const PoppinsFonts = Poppins({ subsets: ["latin"], weight: ["400", "200"] });
 const RasaFonts = Rasa({ subsets: ["latin"], weight: ["600", "700"] });
 function Index() {
@@ -65,6 +67,7 @@ function Index() {
   return (
     <Box>
       <Container maxW={"container.xl"}>
+        <HStack>
         <Box py="26" justifyContent={"space-around"} minH={"30vh"}>
           <Heading
             fontSize={"xxx-large"}
@@ -93,11 +96,11 @@ function Index() {
             <Text px="2"  as="u" color="green.600">
               Pharmacy Student
             </Text>{" "}
-            &{" "}
+            with a passion for {" "}
             <Text as="u" color={"green.600"} px="2">
-              Software Developer
+              Software Development.
             </Text >{" "}
-            by passion.
+            
           </Text>
           <Tag mt="5" colorScheme="green">
             About me.
@@ -116,11 +119,16 @@ function Index() {
             </Link>
           </ButtonGroup>
         </Box>
+        <Box height={"45vh"}  mt="3" width={"30vw"}>
+            {/* <Text textAlign={"center"} bottom={"15"}>PDB ID : 7aad</Text> */}
+            <ModelViewer />
+        </Box>
+        </HStack>
         <ScrollAnimation />
         <Divider mt="6" borderColor={"yellow.400"} />
         <Box mt="6">
-          <Heading className={PoppinsFonts.className} color={"black"}>Projects.</Heading>
-          <Text mt="2" color={"gray.600"}>
+          <Heading className={PoppinsFonts.className} color={"black"}  >Projects.</Heading>
+          <Text mt="2" color={"gray.600"} textAlign={"justify"}>
             In the past couple of years, I{"'"}ve seamlessly navigated both
             pharmaceutical research projects and the development of software
             tailored for the industry. My portfolio reflects a dynamic skill
@@ -145,9 +153,9 @@ function Index() {
               );
             })}
           </Flex>
-          <Flex justifyContent={"flex-start"} flex="1">
+          {/* <Flex justifyContent={"flex-start"} flex="1">
             All the tags are going to be here...
-          </Flex>
+          </Flex> */}
         </Box>
       </Container>
     </Box>

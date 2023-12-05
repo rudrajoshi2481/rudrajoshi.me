@@ -16,14 +16,15 @@
     "@emotion/styled": "latest",
     "@motionone/utils": "^10.16.3",
     "@next/mdx": "latest",
-    "@react-three/drei": "latest",
-    "@react-three/fiber": "latest",
+    "@react-three/drei": "^9.90.0",
+    "@react-three/fiber": "^8.15.12",
     "concurrently": "latest",
     "framer-motion": "10.16.4",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-icons": "latest"
+    "react-icons": "latest",
+    "three": "^0.159.0"
   },
   "devDependencies": {
     "@types/node": "latest",

@@ -31,7 +31,7 @@ export default function RootLayout({
           <ChakraProvider>
             <ColorModeScript
               // storageKey="colorMode"
-              // type="localStorage"
+              // type="localSstorage"
               // key={"5"}
               // initialColorMode={colorMode}
             />
