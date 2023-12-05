@@ -21,6 +21,8 @@ export function ProteinModel(props:any) {
       ModelRef.current.rotation.z += 0.001; // Adjust the rotation speed as needed
       // @ts-expect-error
       ModelRef.current.rotation.y += 0.001;
+      // @ts-expect-error
+      ModelRef.current.rotation.x += 0.001;
     }
   });
 
