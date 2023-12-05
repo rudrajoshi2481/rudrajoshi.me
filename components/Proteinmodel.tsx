@@ -7,6 +7,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber';
 
+
 export function ProteinModel(props:any) {
   const { nodes, materials }:any = useGLTF('/7AAD02.gltf')
 
@@ -18,11 +19,14 @@ export function ProteinModel(props:any) {
 
         // @ts-expect-error
       ModelRef.current.rotation.z += 0.001; // Adjust the rotation speed as needed
+      // @ts-expect-error
+      ModelRef.current.rotation.y += 0.001;
     }
   });
 
   return (
     <group {...props} ref={ModelRef} dispose={null}>
+        
       <mesh geometry={nodes.Mesh_0001.geometry} material={materials['Material_0.001']} position={[-10.033, -38.901, -7.008]} />
       <mesh geometry={nodes.Mesh_1001.geometry} material={materials['Material_0.001']} position={[-10.033, -38.901, -7.008]} />
       <mesh geometry={nodes.Mesh_2001.geometry} material={materials['Material_0.001']} position={[-10.033, -38.901, -7.008]} />

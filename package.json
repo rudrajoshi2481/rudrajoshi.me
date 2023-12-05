@@ -20,13 +20,14 @@
     "@react-three/fiber": "^8.15.12",
     "concurrently": "latest",
     "framer-motion": "10.16.4",
-    "next": "latest",
+    "next": "14.0.1",
     "react": "latest",
     "react-dom": "latest",
     "react-icons": "latest",
     "three": "^0.159.0"
   },
   "devDependencies": {
+    "@react-three/eslint-plugin": "^0.1.1",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
