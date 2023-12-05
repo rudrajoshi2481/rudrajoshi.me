@@ -19,9 +19,11 @@ import dynamic from "next/dynamic"
 // const ScrollAnimation = dynamic(() => import("../../components/ScrollAnimation"),{ssr:false})
 import CardBox from "../../components/CardBox";
 import { useState } from "react";
-import ModelViewer from "../../components/ModelBox";
+// import ModelViewer from "../../components/ModelBox";
 const PoppinsFonts = Poppins({ subsets: ["latin"], weight: ["400", "200"] });
 const RasaFonts = Rasa({ subsets: ["latin"], weight: ["600", "700"] });
+
+const ProteinModel = dynamic(() => import("../../components/ModelBox"),{ssr:false})
 function Index() {
   const [ProjectArray, setProjectArray] = useState([
     {
@@ -121,7 +123,7 @@ function Index() {
         </Box>
         <Box height={"45vh"}  mt="3" width={"30vw"}>
             {/* <Text textAlign={"center"} bottom={"15"}>PDB ID : 7aad</Text> */}
-            <ModelViewer />
+            <ProteinModel />
         </Box>
         </HStack>
         <ScrollAnimation />
