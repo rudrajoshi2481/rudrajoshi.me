@@ -19,11 +19,11 @@ const NotoFonts = Noto_Serif_Old_Uyghur({
   weight: ["400"],
 });
 
-function CardBox({ title, tags, description, awards, links }: any) {
+function CardBox({ title, tags, description, awards, links, height }: any) {
   return (
     <Box
-    key={title}
-      _hover={{ cursor: "pointer", background: "#fdf8e9" }}
+      key={title}
+      _hover={{ cursor: "", background: "#fdf8e9" }}
       pos={"relative"}
       minW={"300"}
     >
@@ -35,12 +35,12 @@ function CardBox({ title, tags, description, awards, links }: any) {
         </Text>
       ) : null}
       <Card
-        minH={"450"}
-        maxH={"450"}
+        minH={height === "small" ? "400" : "450"}
+        maxH={height === "small" ? "400" : "450"}
         borderRadius={"5"}
         p="4"
         border={"1px solid gray"}
-        maxW={"350"}
+        maxW={height === "small" ? "350" : "350"}
       >
         <Heading className={NotoFonts.className}>{title}</Heading>
         <Box display={"flex"} flexWrap={"wrap"}>
@@ -61,18 +61,33 @@ function CardBox({ title, tags, description, awards, links }: any) {
         <Divider my="2" />
         <Text noOfLines={[7, 7, 7]}>{description}</Text>
         {links.name ? (
-          <Box>
-    <Link href={links.link}  target="_blank">        <Button
-              pl="0"
-              background={"none"}
-              _hover={{ background: "none" }}
-              variant={"ghost"}
-              color={"green.600"}
-              as="u"
-            >
+          <Box pos={"absolute"} bottom={"0"} mb="3" ml="3" >
+            <Link href={links.link} target="_blank">
               {" "}
-              👉 {links.name}
-            </Button></Link>
+              <Button
+                pl="0"
+                background={"none"}
+                _hover={{ background: "none" }}
+                variant={"ghost"}
+                color={"blue.600"}
+                as="u"
+              >
+                {" "}
+                <svg
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                >
+                  <path
+                    d="M4.5 6.5L1.328 9.672a2.828 2.828 0 104 4L8.5 10.5m2-2l3.172-3.172a2.829 2.829 0 00-4-4L6.5 4.5m-2 6l6-6"
+                    stroke="currentColor"
+                  ></path>
+                </svg>{" "}
+                <Text ml="3">{links.name}</Text>
+              </Button>
+            </Link>
           </Box>
         ) : null}
       </Card>

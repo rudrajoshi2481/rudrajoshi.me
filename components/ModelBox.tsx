@@ -16,8 +16,9 @@ const ModelViewer = () => {
         shadow-mapSize-height={1024}
         
       />
-      <ambientLight intensity={0.9} color={"white"} />
-      <pointLight position={[10, 10, 10]} />
+      
+      <ambientLight  castShadow intensity={1.5} color={"white"} />
+      
       <mesh scale={[0.1,0.1,0.1]} rotation={[Math.PI / -2, 0, 0]}>
       <ProteinModel />
       </mesh>
