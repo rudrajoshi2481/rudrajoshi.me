@@ -1,5 +1,6 @@
 "use client";
 import {
+  Badge,
   Box,
   Button,
   ButtonGroup,
@@ -75,7 +76,7 @@ function Index() {
       title: "How to use openbabel in python using docker.",
       tags: ["Python", "Docker", "Molecular Dynamics", "SASS"],
       description:
-        "To install openbabel use conda then import pybel from openbabel or else it will not work, in case when used from openbabel bable all package were safe and sound.",
+        "While working on the SASS App, I encountered challenges while integrating open-source tools like OpenBabel. I've thoroughly documented my entire journey, outlining the process of creating a Docker environment to seamlessly integrate this tool into my microservices backend.",
       links: {
         name: "Read Blog",
         link: "https://blogs.rudrajoshi.me/Blogs/openbable-docker",
@@ -86,7 +87,7 @@ function Index() {
       title: "How to create Documentation using MDX.",
       tags: ["Python", "Docker", "Molecular Dynamics", "SASS"],
       description:
-        "To install openbabel use conda then import pybel from openbabel or else it will not work, in case when used from openbabel bable all package were safe and sound.",
+        "This marks my very first blog on my blogging site, created for my future reference. I've written about coding various dynamic components in my app, and this page serves as a guide for me to refer back to.",
       links: {
         name: "Read Blog",
         link: "https://blogs.rudrajoshi.me/Blogs/openbable-docker",
@@ -96,7 +97,8 @@ function Index() {
     {
       title: "Triple Negative Breast Cancer (TNBC)",
       tags: ["Medicinal chemistry", "Research Project"],
-      description: "My Research Notes on Project TNBC",
+      description:
+        "I've recorded all the details for my article while working on the Triple Negative Breast Cancer (TNBC) project. It encompasses all the researched information about TNBC.",
       links: {
         name: "Read Blog",
         link: "https://blogs.rudrajoshi.me/triple-negative-breast-cancer",
@@ -107,7 +109,7 @@ function Index() {
       title: "CImGui Basics",
       tags: ["Julia", "Programming Language"],
       description:
-        "CImGui is used to create a old fashion GUI's (Graphical User Interface), Best in the market right now 💖.        ",
+        "I was exploring a new programming language, driven by my passion for learning. I always prefer understanding concepts through examples, so I began using CImgui to enhance my journey with this language.",
       links: {
         name: "Read Blog",
         link: "https://blogs.rudrajoshi.me/julia/CImGui",
@@ -139,6 +141,33 @@ function Index() {
     },
   ]);
 
+  const BooksList = [
+    "The 4 Hours Work Week",
+    "Elon Musk -Ashlee vance",
+    "The Warren Buffett Way",
+    "Outliers",
+    "Influence",
+    "Zero to One",
+    "Think and Grow Rich",
+    "The One Thing",
+    "Start With Why",
+    "Ikigai",
+    "Rich Dad Poor Dad",
+    "7 Secrets of Persuasion",
+    "The Art of Thinking Clearly",
+    "Eat That Frog",
+    "How to win Friends and Influence People",
+    "The psychology of Money",
+    "The Compound Effect",
+    "The New One Minute Manager",
+    "The Leader In You",
+    "The Power of your Subconcious mind",
+    "Never Split The Diffrence",
+    "How To Talk To Anyone",
+    "Deep Work",
+    "Instant Self-Hypnosis"
+  ];
+
   // ssr-friendly media query with fallback
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)", {
     ssr: true,
@@ -146,8 +175,8 @@ function Index() {
   });
 
   const cursorCSS = {
-    cursor:'url("./360.svg"),auto'
-  }
+    cursor: 'url("./360.svg"),auto',
+  };
 
   return (
     <Box>
@@ -214,9 +243,15 @@ function Index() {
               </Link>
             </ButtonGroup>
           </Box>
-          <Box _hover={{
-            cursor:'url("./360.svg"),auto'
-          }} flex={"1"} height={"45vh"} mt="3" width={"35vw"}>
+          <Box
+            _hover={{
+              cursor: 'url("./360.svg"),auto',
+            }}
+            flex={"1"}
+            height={"45vh"}
+            mt="3"
+            width={"35vw"}
+          >
             {/* <Text textAlign={"center"} bottom={"15"}>PDB ID : 7aad</Text> */}
             <ErrorBoundary>
               <Link href="https://doi.org/10.2210/pdb7AAD/pdb" target="_blank">
@@ -257,7 +292,7 @@ function Index() {
             technology in the pharmaceutical sector.
           </Text>
         </Box>
-        <Box w="full" display={"flex"}>
+        <Box w="full" display={"flex"} flexDir={"column"}>
           <Flex flex="2" gap="6" flexWrap={"wrap"} my="6">
             {ProjectArray.map((e) => {
               return (
@@ -273,6 +308,13 @@ function Index() {
               );
             })}
           </Flex>
+          <Box justifyContent={"center"} display={"flex"}>
+            <Link href="https://github.com/rudrajoshi2481/" target="_blank">
+              <Button variant={"outline"} colorScheme="green">
+                ✨ Explore more projects... ✨
+              </Button>
+            </Link>
+          </Box>
           {/* <Flex justifyContent={"flex-start"} flex="1">
             All the tags are going to be here...
           </Flex> */}
@@ -283,11 +325,9 @@ function Index() {
             Blogs.
           </Heading>
           <Text mt="2" color={"gray.600"} textAlign={"justify"}>
-            In the past couple of years, I{"'"}ve seamlessly navigated both
-            pharmaceutical research projects and the development of software
-            tailored for the industry. My portfolio reflects a dynamic skill
-            set, bridging the gap between hands-on research and cutting-edge
-            technology in the pharmaceutical sector.
+            I have a passion for writing and documenting every project I engage
+            in. Additionally, I delve into multiple programming languages,
+            maintaining a repository of boilerplate code for future reference.
           </Text>
         </Box>
         <Box w="full" display={"flex"}>
@@ -307,9 +347,377 @@ function Index() {
               );
             })}
           </Flex>
-          {/* <Flex justifyContent={"flex-start"} flex="1">
-            All the tags are going to be here...
-          </Flex> */}
+        </Box>
+        <Divider mt="6" borderColor={"yellow.400"} />
+        <Box mt="6">
+          <Heading className={PoppinsFonts.className} color={"black"}>
+            Passion & Hobbies
+          </Heading>
+          <Text mt="2" color={"gray.600"} textAlign={"justify"}>
+            I{"'"}m deeply passionate about trying out new activities regularly.
+            I enjoy reading books, learning different languages, creating 3D
+            animations, jogging, and more.
+          </Text>
+        </Box>
+
+        <Box w="full" mb="6" display={"flex"} flexDir={"column"}>
+          <Flex mt="9" w="full" flexWrap={"wrap"}>
+            <Box flex="1">
+              <Heading className={PoppinsFonts.className} fontSize={"xl"}>
+                01. Programming Languages {"&"} Frameworks.
+              </Heading>
+            </Box>
+            <Box minW={"400"} flex="1" className={PoppinsFonts.className}>
+              <Text fontWeight={"bold"} mb="1">
+                Programming Languages.
+              </Text>
+              <Flex flexWrap={"wrap"} gap={"2"}>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Python
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Javascript
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Typescript
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Node.js
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Julia
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  React.js
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  C++
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  C
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Chakra ui
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Tailwind css
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Slate.js
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Framer Motion
+                </Tag>
+              </Flex>
+              <br />
+
+              <Text mb="1" fontWeight={"bold"}>
+                Framework and Opensource.
+              </Text>
+              <Flex flexWrap={"wrap"} gap={"2"}>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Next.js
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Blender
+                </Tag>
+
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Remix.js
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Redhat
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  CCNA
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  AWS
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Docker
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Google Cloud Service
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Github
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  System Design
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Firebase Firestore
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Google Cloud Storage
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Flutter
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Pub{"/"}Sub
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Microsoft Excel
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Microsoft Word
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Pandas
+                </Tag>
+              </Flex>
+              <br />
+              <Text mb="1" fontWeight={"bold"}>
+                Drug Discovery Tools.
+              </Text>
+              <Flex flexWrap={"wrap"} gap={"2"}>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Rdkit
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Open Babel API
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Pymol
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Dataset filteration
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Discovery Studio
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Autodock vina
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Chemdraw 3d
+                </Tag>
+                <Tag
+                  borderRadius={"2"}
+                  colorScheme="blue"
+                  variant={"outline"}
+                  px="3"
+                >
+                  Sorcery Dock
+                </Tag>
+              </Flex>
+            </Box>
+          </Flex>
+
+          <Flex mt="16" w="full" flexWrap={"wrap"}>
+            <Box flex="1">
+              <Heading className={PoppinsFonts.className} fontSize={"xl"}>
+                02. Books
+              </Heading>
+            </Box>
+            <Box minW={"400"} flex="1" className={PoppinsFonts.className}>
+              <Text mb="1" fontWeight={"bold"}>
+                Self-Help Books.
+              </Text>
+              <Box
+                minW={"400"}
+                flex="1"
+                display={"flex"}
+                flexWrap={"wrap"}
+                gap={"2"}
+              >
+                {BooksList.map((e) => {
+                  return (
+                    <Tag
+                      borderRadius={"2"}
+                      colorScheme="teal"
+                      variant={"outline"}
+                      px="3"
+                    >
+                      {e}
+                    </Tag>
+                  );
+                })}
+              </Box>
+            </Box>
+          </Flex>
         </Box>
       </Container>
     </Box>

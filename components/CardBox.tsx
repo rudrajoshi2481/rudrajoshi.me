@@ -30,13 +30,13 @@ function CardBox({ title, tags, description, awards, links, height }: any) {
       {awards ? (
         <Text zIndex={"5"} right="-6" top="-2" pos={"absolute"}>
           <Tag variant={"solid"} background="#FF8080">
-            Won Gov Grant <br /> ₹1,20,000
+            Won SSIP Grant <br /> ₹1,20,000
           </Tag>
         </Text>
       ) : null}
       <Card
-        minH={height === "small" ? "400" : "450"}
-        maxH={height === "small" ? "400" : "450"}
+        minH={height === "small" ? "450" : "450"}
+        maxH={height === "small" ? "450" : "450"}
         borderRadius={"5"}
         p="4"
         border={"1px solid gray"}
@@ -59,7 +59,7 @@ function CardBox({ title, tags, description, awards, links, height }: any) {
           })}
         </Box>
         <Divider my="2" />
-        <Text noOfLines={[7, 7, 7]}>{description}</Text>
+        <Text noOfLines={[6, 6, 6]}>{description}</Text>
         {links.name ? (
           <Box pos={"absolute"} bottom={"0"} mb="3" ml="3" >
             <Link href={links.link} target="_blank">
