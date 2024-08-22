@@ -1,16 +1,12 @@
-// import './globals.css'
-"use client";
+import { BottomDock } from '../components/BottomDock/Index';
+import './globals.css'
 
-import { CacheProvider } from "@chakra-ui/next-js";
-import {
-  Box,
-  ChakraProvider,
-  ColorModeScript,
-  cookieStorageManagerSSR,
-  localStorageManager,
-} from "@chakra-ui/react";
-import Appbar from "../../components/Appbar";
-import { useEffect, useState } from "react";
+import { Poppins } from 'next/font/google'
+
+// If loading a variable font, you don't need to specify the font weight
+const poppins_fonts = Poppins({
+  subsets: ['latin'], weight: ["100", "200", "300", "400", "500", "600"]
+})
 
 
 export default function RootLayout({
@@ -18,28 +14,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [colorMode, setcolorMode]: any = useState("white");
 
-  useEffect(() => {
-    localStorage.setItem("chakra-ui-color-mode", "white");
-  }, []);
 
   return (
     <html lang="en">
-      <body>
-        <CacheProvider key="5123">
-          <ChakraProvider>
-            <ColorModeScript
-              // storageKey="colorMode"
-              // type="localSstorage"
-              // key={"5"}
-              // initialColorMode={colorMode}
-            />
-            <Appbar />
-            <Box mt="12">{children}</Box>
-            
-          </ChakraProvider>
-        </CacheProvider>
+      <body className={poppins_fonts.className}>
+        {children}
+
+        <div className='sticky bottom-24'>
+          <BottomDock />
+        </div>
       </body>
     </html>
   );
