@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'tan-nimbus'; /* The name you will use in your CSS */
+  src: url('../../public/TAN-NIMBUS.ttf') format('truetype'); /* Path to the TTF file */
+}
+
+.tan-nimbus{
+  font-family: "tan-nimbus";
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
