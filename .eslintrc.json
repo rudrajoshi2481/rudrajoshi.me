@@ -1,12 +1,3 @@
 {
-  "extends": [
-    "plugin:@react-three/all",
-    // "next/core-web-vitals"
-  ],
-  "plugins": [
-    "@react-three"
-  ],
-  "rules": {
-    "@react-three/no-clone-in-frame-loop": "error"
-  }
+  "extends": "next/core-web-vitals"
 }
