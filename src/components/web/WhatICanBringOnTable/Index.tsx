@@ -11,58 +11,59 @@ import {
 } from "@tabler/icons-react";
 import React from "react";
 
-import {cn} from "../../../lib/utils"
+import { cn } from "../../../lib/utils"
+import { Atom, PillBottle } from "lucide-react";
 
 export function WhatICanBrinOnTable() {
   const features = [
     {
-      title: "Built for developers",
+      title: "Bioinformatics Tools",
       description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
-      icon: <IconTerminal2 />,
-    },
-    {
-      title: "Ease of use",
-      description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
+        "RDKit, AutoDock, NGL Viewer, Ketcher, scripting, and more.",
       icon: <IconEaseInOut />,
     },
     {
-      title: "Pricing like no other",
+      title: "Frontend & Backend Frameworks",
       description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
+        "Next.js, Node.js, Firebase, Express, MongoDB, and more.",
+      icon: <IconTerminal2 />,
+    },
+    {
+      title: "DevOps",
+      description:
+        "Linux (Red Hat), Docker, AWS, GCP, GitHub Actions, and more.",
       icon: <IconCurrencyDollar />,
     },
     {
-      title: "100% Uptime guarantee",
-      description: "We just cannot be taken down by anyone.",
+      title: "Linux (Red Hat)",
+      description: "Extensive experience using Linux for the past 7 years.",
       icon: <IconCloud />,
     },
     {
-      title: "Multi-tenant Architecture",
-      description: "You can simply share passwords instead of buying new seats",
-      icon: <IconRouteAltLeft />,
+      title: "Pharmaceutical Formulations",
+      description: "Experience with ointments, tablets, capsules, dissolution, disintegration, and more.",
+      icon: <PillBottle />,
     },
     {
-      title: "24/7 Customer Support",
+      title: "Medicinal Chemistry",
       description:
-        "We are available a 100% of the time. Atleast our AI Agents are.",
-      icon: <IconHelp />,
+        "Extensive work in Medicinal Chemistry labs during my pharmacy years.",
+      icon: <Atom />,
     },
     {
-      title: "Money back guarantee",
+      title: "Leadership and Project Management",
       description:
-        "If you donot like EveryAI, we will convince you to like us.",
+        "Led a grant-funded project focused on anticancer drug research.",
       icon: <IconAdjustmentsBolt />,
     },
     {
-      title: "And everything else",
-      description: "I just ran out of copy ideas. Accept my sincere apologies",
+      title: "And Everything Else",
+      description: "I have so many passions, it's like a fireworks show!.",
       icon: <IconHeart />,
     },
   ];
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative py-10 max-w-7xl mx-auto">
       {features.map((feature, index) => (
         <Feature key={feature.title} {...feature} index={index} />
       ))}
@@ -84,7 +85,7 @@ const Feature = ({
   return (
     <div
       className={cn(
-        "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
+        "flex flex-col lg:border-r  pt-10 py-8 relative group/feature dark:border-neutral-800",
         (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
         index < 4 && "lg:border-b dark:border-neutral-800"
       )}
