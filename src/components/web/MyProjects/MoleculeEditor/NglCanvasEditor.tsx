@@ -21,7 +21,7 @@ function MainNglCanvas() {
 
   useEffect(() => {
     stage
-      ?.loadFile("http://files.rcsb.org/download/7aad.pdb")
+      ?.loadFile("/7aad.pdb")
       .then((component: any) => {
         component.addRepresentation("cartoon", {
           color: "atomindex",
