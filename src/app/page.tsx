@@ -24,7 +24,7 @@ function page() {
         />
       </div>
       <div>
-        <h1 className='text-6xl  tan-nimbus font-semibold text-center mt-4'>What I Bring to the Table</h1>
+        <h1 className='text-6xl  tan-nimbus font-semibold text-center mt-4'>Unique Contributions to Healthcare & Technology</h1>
         <WhatICanBrinOnTable />
       </div>
 
