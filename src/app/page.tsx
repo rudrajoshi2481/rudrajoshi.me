@@ -25,7 +25,7 @@ function page() {
       <Appbar />
       <HeroComponent />
       <Separator className='mb-8' />
-    <VelocityScroll text='Bioinformatics |' className={`text-6xl ${RasaFonts.className}`} default_velocity={2}/>
+    <VelocityScroll text='Bioinformatics | Medicinal Chemistry | Molecular Docking | Machine Learning | Deep Learning' className={`text-6xl ${RasaFonts.className}`} default_velocity={2}/>
     <Separator className='mt-8' />
     <ResearchExperience />
     </div>
