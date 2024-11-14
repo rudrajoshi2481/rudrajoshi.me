@@ -42,7 +42,7 @@ export default function ResearchExperience() {
   return (
     <div className="container mx-auto px-4 py-16 ">
       <h1 className="text-5xl font-extrabold mb-12 text-center ">
-        Research Experience
+        Research Experience.
       </h1>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <AnimatePresence>

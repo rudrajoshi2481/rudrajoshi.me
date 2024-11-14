@@ -15,6 +15,7 @@ import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
 import { Canvas } from '@react-three/fiber';
 import ModelViewer from '@/components/NewComponents/proteinBlock/ModelBox';
 import { BottomDock } from '@/components/web/BottomDock/Index';
+import Skills from '@/components/NewComponents/Skills/Skills';
 
 
 
@@ -26,10 +27,13 @@ function page() {
     <div>
       <Appbar />
       <HeroComponent />
+      <div className='container '>
       <Separator className='mb-8' />
       <VelocityScroll text='Bioinformatics | Medicinal Chemistry | Molecular Docking | Machine Learning | Deep Learning' className={`text-4xl font-bold ${NotoFonts.className}`} default_velocity={0.51} />
       <Separator className='mt-8' />
+      </div>
       <ResearchExperience />
+      <Skills />
     </div>
   )
 }
@@ -76,6 +80,7 @@ const HeroComponent = () => {
               <ModelViewer />
             </Canvas>
           </div>
+          
         </div>
       </div>
     </div>
