@@ -97,7 +97,7 @@ const DATA = {
 
 export function BottomDock() {
   return (
-    <div className="  flex  flex-col items-center justify-center overflow-hidden rounded-lg " >
+    <div className="  flex " >
 
       <TooltipProvider>
         <Dock direction="middle" >

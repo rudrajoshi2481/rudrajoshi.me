@@ -28,8 +28,8 @@ function Appbar() {
                   <span className="cursor-pointer hover:underline">Blogs</span>
                 </Link>
               </li>
-              <li className="cursor-pointer hover:underline">Projects</li>
-              <li className="cursor-pointer hover:underline">About me</li>
+              {/* <li className="cursor-pointer hover:underline">Projects</li>
+              <li className="cursor-pointer hover:underline">About me</li> */}
             </ul>
           </div>
         ) : null}

@@ -12,6 +12,37 @@
   font-family: "tan-nimbus";
 }
 
+
+.appbar {
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0) 1px,
+    #fdfdfd 1px
+  );
+  background-size: 4px 4px;
+  backdrop-filter: blur(3px);
+  font-size: 14px;
+  line-height: 14px;
+  border-bottom: 1px solid gray;
+}
+
+.appbar::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #111111;
+  opacity: 0.2;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;

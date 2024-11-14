@@ -1,8 +1,12 @@
+'use client'
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CalendarIcon, ExternalLink } from 'lucide-react'
+import { CalendarIcon, ExternalLink, MapPinIcon, TagIcon } from 'lucide-react'
 import Link from "next/link"
+import { motion, AnimatePresence } from "framer-motion"
 
 const projects = [
   {
@@ -34,53 +38,76 @@ const projects = [
 ]
 
 export default function ResearchExperience() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+
   return (
-    <div className="container mx-auto px-4 py-12">
-        <h1 className="my-16 font-bold text-4xl">Research Experience</h1>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => (
-          <Card key={index} className="flex flex-col">
-            <CardHeader>
-              <CardTitle>{project.title}</CardTitle>
-              <p className="text-sm text-muted-foreground">{project.subtitle}</p>
-              <div className="flex items-center text-sm text-muted-foreground">
-                <CalendarIcon className="mr-1 h-4 w-4" />
-                {project.period}
-              </div>
-            </CardHeader>
-            <CardContent>
-              <div className="mb-4 flex flex-wrap gap-2">
-                {project.tags.map((tag, tagIndex) => (
-                  <Badge key={tagIndex} variant="secondary">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-              <p className="text-sm">{project.description}</p>
-            </CardContent>
-            {project.link && (
-              <CardFooter>
-                <Button asChild variant="outline" className="w-full">
-                  <Link href={project.link} target="_blank" rel="noopener noreferrer">
-                    Explore Project
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </CardFooter>
-            )}
-          </Card>
-        ))}
-      </div>
-      <div className="mt-12 flex justify-center">
-        <Button asChild variant="outline" className="group">
-          <Link href="https://github.com/rudrajoshi2481/" target="_blank" rel="noopener noreferrer">
-            <span className="mr-2">✨</span>
-            Explore more projects
-            <span className="ml-2">✨</span>
-            <ExternalLink className="ml-2 h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100" />
-          </Link>
-        </Button>
+    <div className="container mx-auto px-4 py-16 ">
+      <h1 className="text-5xl font-extrabold mb-12 text-center ">
+        Research Experience
+      </h1>
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <AnimatePresence>
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card 
+                className="flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-100">{project.title}</CardTitle>
+                  <div className="flex items-center text-sm text-gray-600 dark:text-gray-300 mb-2">
+                    <MapPinIcon className="mr-1 h-4 w-4" />
+                    {project.subtitle}
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                    <CalendarIcon className="mr-1 h-4 w-4" />
+                    {project.period}
+                  </div>
+                </CardHeader>
+                <CardContent className="flex-grow pb-4">
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    <TagIcon className="h-4 w-4 text-gray-500 dark:text-gray-400 mr-1" />
+                    {project.tags.map((tag, tagIndex) => (
+                      <Badge key={tagIndex} variant="secondary" className="text-xs bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-100">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
+                </CardContent>
+                {project.link && (
+                  <CardFooter>
+                    <Button asChild variant="outline" className="w-full group bg-transparent hover:bg-purple-500 hover:text-white transition-all duration-300">
+                      <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                        Explore Project
+                        <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                )}
+                <AnimatePresence>
+                  {hoveredIndex === index && (
+                    <motion.div 
+                      className="absolute inset-0 bg-purple-500/10 dark:bg-purple-500/20 pointer-events-none rounded-lg"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  )}
+                </AnimatePresence>
+              </Card>
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
     </div>
   )
-}
+} 
