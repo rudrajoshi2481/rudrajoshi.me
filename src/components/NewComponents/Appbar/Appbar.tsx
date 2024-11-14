@@ -24,7 +24,7 @@ function Appbar() {
           <div>
             <ul className="flex gap-6 list-none">
               <li>
-                <Link href="https://blogs.rudrajoshi.me" target="_blank">
+                <Link href="https://blogs.rudhrajoshi.me" target="_blank">
                   <span className="cursor-pointer hover:underline">Blogs</span>
                 </Link>
               </li>
