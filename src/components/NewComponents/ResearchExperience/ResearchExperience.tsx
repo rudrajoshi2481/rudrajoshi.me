@@ -38,7 +38,6 @@ const projects = [
 ]
 
 export default function ResearchExperience() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
     <div className="container mx-auto px-4 py-16 ">
@@ -56,9 +55,8 @@ export default function ResearchExperience() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card 
-                className="flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                className="flex flex-col h-full transition-all duration-300 "
+                
               >
                 <CardHeader className="pb-4">
                   <CardTitle className="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-100">{project.title}</CardTitle>
@@ -92,17 +90,7 @@ export default function ResearchExperience() {
                     </Button>
                   </CardFooter>
                 )}
-                <AnimatePresence>
-                  {hoveredIndex === index && (
-                    <motion.div 
-                      className="absolute inset-0 bg-purple-500/10 dark:bg-purple-500/20 pointer-events-none rounded-lg"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  )}
-                </AnimatePresence>
+               
               </Card>
             </motion.div>
           ))}
