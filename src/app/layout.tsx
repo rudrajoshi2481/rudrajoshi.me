@@ -4,7 +4,7 @@ import "./globals.css";
 import { BottomDock } from "@/components/web/BottomDock/Index";
 
 const fonts_poppins = Poppins({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600","700","800","900"] });
-export const fonts_old_uyghur = Noto_Serif_Old_Uyghur({ weight: ["400"], subsets: ["latin"] })
+
 
 export const metadata: Metadata = {
   title: "Rudhra Joshi",
@@ -19,10 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fonts_poppins.className} `}>{children}
-        <div className="sticky bottom-20 z-50 flex justify-center  ">
+        {/* <div className="sticky bottom-20 z-50 flex justify-center  ">
           <div className="">
             <BottomDock />
-          </div></div>
+          </div></div> */}
       </body>
     </html>
   );
