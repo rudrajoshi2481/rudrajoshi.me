@@ -13,13 +13,13 @@ const projects = [
     title: "Sorcery Dock",
     subtitle: "sorcery.rudrajoshi.me",
     period: "2023 - 2024",
-    tags: ["Molecular Docking", "Git Version Control", "Molecular Visualizer", "Text Editor"],
+    tags: ["Molecular Docking", "Git Version Control", "Molecular Visualizer", "Text Editor","Software Development"],
     description:
       "Developed a bioinformatics platform to streamline molecular docking with Git-like version control and live molecular editing. Automated predictions using AWS and Google Cloud, enhancing scalability and accuracy using Autodock. Built with Next.js, Node.js, Go, and Docker, integrating SQL and MongoDB for efficient data management.",
     link: "https://sorcery.rudrajoshi.me",
   },
   {
-    title: "Triple-Negative Breast Cancer Drug Design",
+    title: "Triple-Negative Breast Cancer Drug Design (Grant)",
     subtitle: "blogs.rudrajoshi.me",
     period: "2022 - 2023",
     tags: ["Medicinal Chemistry", "Computer Aided Drug Discovery"],

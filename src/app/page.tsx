@@ -16,6 +16,8 @@ import { Canvas } from '@react-three/fiber';
 import ModelViewer from '@/components/NewComponents/proteinBlock/ModelBox';
 import { BottomDock } from '@/components/web/BottomDock/Index';
 import Skills from '@/components/NewComponents/Skills/Skills';
+import { Fog } from 'three';
+import BlogCards from '@/components/NewComponents/Blogs/Blogs';
 
 
 
@@ -29,11 +31,17 @@ function page() {
       <HeroComponent />
       <div className='container '>
       <Separator className='mb-8' />
-      <VelocityScroll text='Bioinformatics | Medicinal Chemistry | Molecular Docking | Machine Learning | Deep Learning' className={`text-4xl font-bold ${NotoFonts.className}`} default_velocity={0.51} />
+      <VelocityScroll
+  text='Bioinformatics | Medicinal Chemistry | Molecular Docking | Machine Learning | Deep Learning | Pharmacoinformatics | Drug Discovery | Computational Biology | Cancer Research | Molecular Dynamics | Structural Biology | Genetic Analysis | Evolutionary Genomics | Protein-Ligand Interactions | Single-cell RNA Sequencing | Statistical Mechanics | Cloud Computing | Google Cloud | AWS | Next.js | Node.js | Go | Docker | SQL | MongoDB | Kubernetes | Git Version Control | High-Performance Computing'
+  className={`text-4xl font-bold ${NotoFonts.className}`}
+  default_velocity={0.31}
+/>
+
       <Separator className='mt-8' />
       </div>
       <ResearchExperience />
       <Skills />
+      <BlogCards   />
     </div>
   )
 }
@@ -72,10 +80,14 @@ const HeroComponent = () => {
 
             <Canvas
               camera={{
-                position: [0, 5, 30], // Set camera position to zoom out
+                position: [0, 5, 35], // Set camera position to zoom out
                 fov: 75, // Field of view
               }}
+
+              shadows
+            
             >
+              
 
               <ModelViewer />
             </Canvas>
