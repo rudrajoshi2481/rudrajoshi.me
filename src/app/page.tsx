@@ -32,7 +32,7 @@ function page() {
       <div className='container '>
       <Separator className='mb-8' />
       <VelocityScroll
-  text='Bioinformatics | Medicinal Chemistry | Molecular Docking | Machine Learning | Deep Learning | Pharmacoinformatics | Drug Discovery | Computational Biology | Cancer Research | Molecular Dynamics | Structural Biology | Genetic Analysis | Evolutionary Genomics | Protein-Ligand Interactions | Single-cell RNA Sequencing | Statistical Mechanics | Cloud Computing | Google Cloud | AWS | Next.js | Node.js | Go | Docker | SQL | MongoDB | Kubernetes | Git Version Control | High-Performance Computing'
+  text='Bioinformatics | Medicinal Chemistry | Molecular Docking | Machine Learning | Deep Learning | RNA-seq | Hi-C | ChIP-seq | ATAC-seq | ChIA-PET | HiChIP | GATK | Pharmaceutical Science |'
   className={`text-4xl font-bold ${NotoFonts.className}`}
   default_velocity={0.31}
 />
@@ -63,7 +63,8 @@ const HeroComponent = () => {
             </p>
 
             <p className=" text-gray-800 text-xl leading-relaxed max-w-[650px]">
-              Bioinformatics researcher specializing in drug discovery, single-cell sequencing, and computational biology. Skilled in bioinformatics software development, research automation, and cloud computing. Proficient in Python, R, and high-throughput data analysis for advancing medical research.
+              {/* Bioinformatics researcher specializing in drug discovery, single-cell sequencing, and computational biology. Skilled in bioinformatics software development, research automation, and cloud computing. Proficient in Python, R, and high-throughput data analysis for advancing medical research. */}
+              Bioinformatics researcher specializing in single-cell Hi-C data analysis, deep learning, and computational biology. Skilled in pipeline development, database design, and cloud-based large-scale research using AWS and GCP. Proficient in Python, R, and high-throughput data analysis to advance drug discovery and genomics.
             </p>
 
             <div className="-mt-6 float-left w-[10vw]">
