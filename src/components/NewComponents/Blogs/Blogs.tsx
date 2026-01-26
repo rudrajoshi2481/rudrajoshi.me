@@ -67,28 +67,28 @@ const blogs = [
 export default function BlogCardsPage() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Latest Blog Posts</h1>
+      <h1 className="text-4xl font-bold mb-12 tracking-tight text-slate-900">Latest Blog Posts</h1>
       {blogs.length === 0 ? (
         <p className="text-muted-foreground">No blog posts available at the moment.</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogs.map((blog, index) => (
             <Link href="https://www.blogs.rudhrajoshi.me" key={index} target="_blank">
-              <Card className="flex flex-col transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg overflow-hidden bg-gradient-to-r from-gray-100 via-white to-gray-100">
-                <CardHeader className="p-4 bg-blue-50 border-b border-gray-200">
-                  <CardTitle className="text-lg font-semibold text-blue-900">{blog.title}</CardTitle>
-                  <CardDescription className="text-sm text-gray-600 mt-1">{blog.description}</CardDescription>
+              <Card className="flex flex-col h-full transition-all duration-300 hover:shadow-md border border-slate-200 bg-white">
+                <CardHeader className="p-4">
+                  <CardTitle className="text-lg font-semibold text-slate-900">{blog.title}</CardTitle>
+                  <CardDescription className="text-sm text-slate-600 mt-1 line-clamp-3">{blog.description}</CardDescription>
                 </CardHeader>
-                <CardContent className="flex-grow p-4">
-                  <div className="flex flex-wrap gap-2 mb-4">
+                <CardContent className="flex-grow p-4 pt-0">
+                  <div className="flex flex-wrap gap-1.5">
                     {blog.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="secondary" className="bg-blue-100 text-blue-800">
+                      <Badge key={tagIndex} variant="secondary" className="text-xs font-normal bg-slate-100 text-slate-700 border-0">
                         {tag}
                       </Badge>
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="p-4 bg-gray-50 border-t border-gray-200 flex justify-between items-center text-sm text-gray-500">
+                <CardFooter className="p-4 border-t border-slate-100 flex justify-between items-center text-sm text-slate-500">
                   <div className="flex items-center">
                     <CalendarDays className="w-4 h-4 mr-2" aria-hidden="true" />
                     <span>{new Date(blog.publishDate).toLocaleDateString()}</span>

@@ -18,6 +18,7 @@ import { BottomDock } from '@/components/web/BottomDock/Index';
 import Skills from '@/components/NewComponents/Skills/Skills';
 import { Fog } from 'three';
 import BlogCards from '@/components/NewComponents/Blogs/Blogs';
+import ClipDemo from '@/components/NewComponents/ClipDemo/ClipDemo';
 
 
 
@@ -40,6 +41,7 @@ function page() {
       <Separator className='mt-8' />
       </div>
       <ResearchExperience />
+      <ClipDemo />
       <Skills />
       <BlogCards   />
     </div>
@@ -55,17 +57,17 @@ const HeroComponent = () => {
         <div className="flex flex-wrap">
           <div className="flex flex-col min-w-[350px] min-h-[30vh] py-8 px-6 mr-16 space-y-4 mt-12">
             <h1 className={`text-4xl font-bold text-gray-900 ${fonts_poppins.className}`}>
-              Hey, I{"'"}m <span className="text-green-600">Rudhra Joshi.</span>
+              Hey, I{"'"}m <span className="text-green-600 underline decoration-2 underline-offset-4">Rudhra Joshi.</span>
             </h1>
 
-            <p className="text-lg text-green-700">
+            <p className="text-lg text-green-600 font-medium">
               MS in Bioinformatics & Bachelor{"'"}s in Pharmacy
             </p>
 
-            <p className=" text-gray-800 text-xl leading-relaxed max-w-[650px]">
-              {/* Bioinformatics researcher specializing in drug discovery, single-cell sequencing, and computational biology. Skilled in bioinformatics software development, research automation, and cloud computing. Proficient in Python, R, and high-throughput data analysis for advancing medical research. */}
-              Bioinformatics researcher specializing in single-cell Hi-C data analysis, deep learning, and computational biology. Skilled in pipeline development, database design, and cloud-based large-scale research using AWS and GCP. Proficient in Python, R, and high-throughput data analysis to advance drug discovery and genomics.
+            <p className="text-slate-600 text-lg leading-relaxed max-w-[650px]">
+              Bioinformatics Researcher with <span className="font-semibold text-slate-900">5+ years of experience</span> specializing in chromatin conformation analysis (Hi-C, HiChIP, ChIA-PET) and deep learning for genomics. Developed Chr3D chromatin analysis framework and built open-source implementations of 20+ SOTA models including AlphaFold, CLIP, and diffusion architectures.
             </p>
+         
 
             <div className="-mt-6 float-left w-[10vw]">
               <BottomDock />
